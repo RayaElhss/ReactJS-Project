@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 export default function TopBar() {
-    useEffect(() => {
-
-    }, [])
     return (
         <div className="container-fluid bg-primary px-5 d-none d-lg-block">
             <div className="row gx-0">
@@ -16,16 +12,16 @@ export default function TopBar() {
                 </div>
                 <div className="col-lg-4 text-center text-lg-end">
                     <div className="d-inline-flex align-items-center" style={{ height: 45 }}>
-                        <a href="#">
+                        <a href="/register">
                             <small className="me-3 text-light">
                                 <i className="fa fa-user me-2" />
                                 Register
                             </small>
                         </a>
-                        <a href="#">
+                        <a href="/login">
                             <small className="me-3 text-light">
                                 <i className="fa fa-sign-in-alt me-2" />
-                                Login
+                                Login 
                             </small>
                         </a>
                         <div className="dropdown">

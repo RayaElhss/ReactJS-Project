@@ -13,10 +13,20 @@ import ShareAdventures from './components/shareAdventures/ShareAdventures';
 import TravelGuide from './components/travelGuide/TravelGuide';
 import OurBlog from './components/ourBlog/OurBlog';
 import Footer from './components/footer/Footer';
+import { Routes, Route } from 'react-router-dom'
+import Register from './components/register/Register';
+import Login from './components/login/Login';
+import Profile from './components/profile/Profile';
 
 function App() {
   return (
     <>
+
+      <Routes>
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/profile' element={<Profile />} />
+      </Routes>
 
       <TopBar />
 
@@ -41,6 +51,9 @@ function App() {
       <OurBlog />
 
       <Footer />
+
+
+      <Profile />
     </>
   )
 }

@@ -5,16 +5,12 @@ export default function About() {
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-5">
                         <div
-                            className="h-100"
-                            style={{
-                                border: '50px solid',
-                                borderColor: 'transparent #13357B transparent #13357B'
-                            }}
+                            
                         >
                             <img
                                 alt=""
                                 className="img-fluid w-100 h-100"
-                                src="img/about-img.jpg"
+                                src="img/about.jpeg"
                             />
                         </div>
                     </div>
@@ -77,12 +73,7 @@ export default function About() {
                                 </p>
                             </div>
                         </div>
-                        <a
-                            className="btn btn-primary rounded-pill py-3 px-5 mt-2"
-                            href=""
-                        >
-                            Read More
-                        </a>
+                        
                     </div>
                 </div>
             </div>
