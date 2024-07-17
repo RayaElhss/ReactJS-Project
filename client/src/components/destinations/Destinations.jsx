@@ -1,4 +1,14 @@
+import { useEffect, useState } from "react";
+import * as destinationsAPI  from '../../api/destinations-api';
+
 export default function Destinations() {
+
+    const [destinations, setDestinations] = useState([])
+
+    useEffect(() => {
+        destinationsAPI.getAll()
+        .then(result => setDestinations(result));
+    }, []);
     return (
         <div className="container-fluid destination py-5">
             <div className="container py-5">
@@ -9,10 +19,10 @@ export default function Destinations() {
                     }}
                 >
                     <h5 className="section-title px-3">
-                        Destinations
+                        Destination
                     </h5>
                     <h1 className="mb-0">
-                        Popular Destinations
+                        Popular Destination
                     </h1>
                 </div>
                 <div className="tab-class text-center">
@@ -93,7 +103,7 @@ export default function Destinations() {
                                         width: '150px'
                                     }}
                                 >
-                                    Africa
+                                    Asia
                                 </span>
                             </a>
                         </li>
@@ -109,7 +119,7 @@ export default function Destinations() {
                                         width: '150px'
                                     }}
                                 >
-                                    Asia
+                                    Africa
                                 </span>
                             </a>
                         </li>
@@ -122,41 +132,7 @@ export default function Destinations() {
                             <div className="row g-4">
                                 <div className="col-xl-8">
                                     <div className="row g-4">
-                                        <div className="col-lg-6">
-                                            <div className="destination-img">
-                                                <img
-                                                    alt=""
-                                                    className="img-fluid rounded w-100"
-                                                    src="img/destination-1.jpg"
-                                                />
-                                                <div className="destination-overlay p-4">
-                                                    <a
-                                                        className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                        href="#"
-                                                    >
-                                                        20                                                Photos
-                                                    </a>
-                                                    <h4 className="text-white mb-2 mt-3">
-                                                        New York City
-                                                    </h4>
-                                                    <a
-                                                        className="btn-hover text-white"
-                                                        href="#"
-                                                    >
-                                                        View All Place{' '}
-                                                        <i className="fa fa-arrow-right ms-2" />
-                                                    </a>
-                                                </div>
-                                                <div className="search-icon">
-                                                    <a
-                                                        data-lightbox="destination-1"
-                                                        href="img/destination-1.jpg"
-                                                    >
-                                                        <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div className="col-lg-6">
                                             <div className="destination-img">
                                                 <img
@@ -165,18 +141,12 @@ export default function Destinations() {
                                                     src="img/destination-2.jpg"
                                                 />
                                                 <div className="destination-overlay p-4">
-                                                    <a
-                                                        className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                        href="#"
-                                                    >
-                                                        20                                                Photos
-                                                    </a>
                                                     <h4 className="text-white mb-2 mt-3">
                                                         Las vegas
                                                     </h4>
                                                     <a
                                                         className="btn-hover text-white"
-                                                        href="#"
+                                                        href="/lasvegas"
                                                     >
                                                         View All Place{' '}
                                                         <i className="fa fa-arrow-right ms-2" />
@@ -192,222 +162,12 @@ export default function Destinations() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-6">
-                                            <div className="destination-img">
-                                                <img
-                                                    alt=""
-                                                    className="img-fluid rounded w-100"
-                                                    src="img/destination-7.jpg"
-                                                />
-                                                <div className="destination-overlay p-4">
-                                                    <a
-                                                        className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                        href="#"
-                                                    >
-                                                        20                                                Photos
-                                                    </a>
-                                                    <h4 className="text-white mb-2 mt-3">
-                                                        Los angelas
-                                                    </h4>
-                                                    <a
-                                                        className="btn-hover text-white"
-                                                        href="#"
-                                                    >
-                                                        View All Place{' '}
-                                                        <i className="fa fa-arrow-right ms-2" />
-                                                    </a>
-                                                </div>
-                                                <div className="search-icon">
-                                                    <a
-                                                        data-lightbox="destination-7"
-                                                        href="img/destination-7.jpg"
-                                                    >
-                                                        <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="destination-img">
-                                                <img
-                                                    alt=""
-                                                    className="img-fluid rounded w-100"
-                                                    src="img/destination-8.jpg"
-                                                />
-                                                <div className="destination-overlay p-4">
-                                                    <a
-                                                        className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                        href="#"
-                                                    >
-                                                        20                                                Photos
-                                                    </a>
-                                                    <h4 className="text-white mb-2 mt-3">
-                                                        Los angelas
-                                                    </h4>
-                                                    <a
-                                                        className="btn-hover text-white"
-                                                        href="#"
-                                                    >
-                                                        View All Place{' '}
-                                                        <i className="fa fa-arrow-right ms-2" />
-                                                    </a>
-                                                </div>
-                                                <div className="search-icon">
-                                                    <a
-                                                        data-lightbox="destination-8"
-                                                        href="img/destination-8.jpg"
-                                                    >
-                                                        <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                                <div className="col-xl-4">
-                                    <div className="destination-img h-100">
-                                        <img
-                                            alt=""
-                                            className="img-fluid rounded w-100 h-100"
-                                            src="img/destination-9.jpg"
-                                            style={{
-                                                minHeight: '300px',
-                                                objectFit: 'cover'
-                                            }}
-                                        />
-                                        <div className="destination-overlay p-4">
-                                            <a
-                                                className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                href="#"
-                                            >
-                                                20                                        Photos
-                                            </a>
-                                            <h4 className="text-white mb-2 mt-3">
-                                                San francisco
-                                            </h4>
-                                            <a
-                                                className="btn-hover text-white"
-                                                href="#"
-                                            >
-                                                View All Place{' '}
-                                                <i className="fa fa-arrow-right ms-2" />
-                                            </a>
-                                        </div>
-                                        <div className="search-icon">
-                                            <a
-                                                data-lightbox="destination-4"
-                                                href="img/destination-9.jpg"
-                                            >
-                                                <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="destination-img">
-                                        <img
-                                            alt=""
-                                            className="img-fluid rounded w-100"
-                                            src="img/destination-4.jpg"
-                                        />
-                                        <div className="destination-overlay p-4">
-                                            <a
-                                                className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                href="#"
-                                            >
-                                                20                                        Photos
-                                            </a>
-                                            <h4 className="text-white mb-2 mt-3">
-                                                Los angelas
-                                            </h4>
-                                            <a
-                                                className="btn-hover text-white"
-                                                href="#"
-                                            >
-                                                View All Place{' '}
-                                                <i className="fa fa-arrow-right ms-2" />
-                                            </a>
-                                        </div>
-                                        <div className="search-icon">
-                                            <a
-                                                data-lightbox="destination-4"
-                                                href="img/destination-4.jpg"
-                                            >
-                                                <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="destination-img">
-                                        <img
-                                            alt=""
-                                            className="img-fluid rounded w-100"
-                                            src="img/destination-5.jpg"
-                                        />
-                                        <div className="destination-overlay p-4">
-                                            <a
-                                                className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                href="#"
-                                            >
-                                                20                                        Photos
-                                            </a>
-                                            <h4 className="text-white mb-2 mt-3">
-                                                Los angelas
-                                            </h4>
-                                            <a
-                                                className="btn-hover text-white"
-                                                href="#"
-                                            >
-                                                View All Place{' '}
-                                                <i className="fa fa-arrow-right ms-2" />
-                                            </a>
-                                        </div>
-                                        <div className="search-icon">
-                                            <a
-                                                data-lightbox="destination-5"
-                                                href="img/destination-5.jpg"
-                                            >
-                                                <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="destination-img">
-                                        <img
-                                            alt=""
-                                            className="img-fluid rounded w-100"
-                                            src="img/destination-6.jpg"
-                                        />
-                                        <div className="destination-overlay p-4">
-                                            <a
-                                                className="btn btn-primary text-white rounded-pill border py-2 px-3"
-                                                href="#"
-                                            >
-                                                20                                        Photos
-                                            </a>
-                                            <h4 className="text-white mb-2 mt-3">
-                                                Los angelas
-                                            </h4>
-                                            <a
-                                                className="btn-hover text-white"
-                                                href="#"
-                                            >
-                                                View All Place{' '}
-                                                <i className="fa fa-arrow-right ms-2" />
-                                            </a>
-                                        </div>
-                                        <div className="search-icon">
-                                            <a
-                                                data-lightbox="destination-6"
-                                                href="img/destination-6.jpg"
-                                            >
-                                                <i className="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+
+
                             </div>
                         </div>
                         <div
@@ -427,7 +187,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -462,7 +222,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -504,7 +264,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -539,7 +299,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -581,7 +341,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -616,7 +376,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -658,7 +418,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -693,7 +453,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -735,7 +495,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco
@@ -770,7 +530,7 @@ export default function Destinations() {
                                                 className="btn btn-primary text-white rounded-pill border py-2 px-3"
                                                 href="#"
                                             >
-                                                20                                        Photos
+                                                20 Photos
                                             </a>
                                             <h4 className="text-white mb-2 mt-3">
                                                 San francisco

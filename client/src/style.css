@@ -522,7 +522,6 @@
 .destination .tab-class .nav-item {
     padding: 0 0 20px 0;
 }
-
 .destination .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
 }
@@ -550,6 +549,7 @@
 .destination .tab-class .tab-content .destination-img:hover img {
     transform: scale(1.2);
 }
+  
 
 /*** Destination End ***/
 
@@ -1300,3 +1300,13 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
     }
+
+    .icon-hover:hover {
+        border-color: #3b71ca !important;
+        background-color: white !important;
+        color: #3b71ca !important;
+      }
+      
+      .icon-hover:hover i {
+        color: #3b71ca !important;
+      }
