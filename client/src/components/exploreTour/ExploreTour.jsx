@@ -36,22 +36,7 @@ export default function ExploreTour() {
                                 </span>
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a
-                                className="d-flex py-2 mx-3 border border-primary bg-light rounded-pill"
-                                data-bs-toggle="pill"
-                                href="#InternationalTab-2"
-                            >
-                                <span
-                                    className="text-dark"
-                                    style={{
-                                        width: '250px'
-                                    }}
-                                >
-                                    International tour Category
-                                </span>
-                            </a>
-                        </li>
+                        
                     </ul>
                     <div className="tab-content">
                         <div
