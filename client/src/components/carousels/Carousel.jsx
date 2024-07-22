@@ -52,14 +52,7 @@ export default function Carousel() {
                                 <p className="mb-5 fs-5">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 </p>
-                                <div className="d-flex align-items-center justify-content-center">
-                                    <a
-                                        className="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5"
-                                        href="#"
-                                    >
-                                        Discover Now
-                                    </a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -90,14 +83,7 @@ export default function Carousel() {
                                 <p className="mb-5 fs-5">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 </p>
-                                <div className="d-flex align-items-center justify-content-center">
-                                    <a
-                                        className="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5"
-                                        href="#"
-                                    >
-                                        Discover Now
-                                    </a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -128,14 +114,7 @@ export default function Carousel() {
                                 <p className="mb-5 fs-5">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 </p>
-                                <div className="d-flex align-items-center justify-content-center">
-                                    <a
-                                        className="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5"
-                                        href="#"
-                                    >
-                                        Discover Now
-                                    </a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

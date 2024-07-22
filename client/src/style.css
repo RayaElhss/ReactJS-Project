@@ -171,9 +171,9 @@
 /* Navbar.css */
 
 .navbar {
-    position: relative;
+    position: sticky;
     z-index: 900;
-    margin-top: 45px; /* Adjust this value based on the height of your topbar */
+    margin-top: 0px; /* Adjust this value based on the height of your topbar */
 }
 
 .navbar-light .navbar-nav .nav-link {
