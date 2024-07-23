@@ -19,12 +19,14 @@ import Profile from './components/profile/Profile';
 import Search from './components/search/Search';
 import Test from './components/test/Test';
 import PackageDetails from './components/package-details/PackageDetails.jsx';
+import FamilyTours from './components/family-tours/FamilyTours.jsx';
 
 function App() {
   return (
     <>
       <TopBar />
       <Navbar />
+      <FamilyTours />
 
       <Routes>
         <Route path="/" element={

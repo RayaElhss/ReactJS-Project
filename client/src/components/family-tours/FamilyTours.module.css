@@ -7,10 +7,12 @@
 .categoryHeader h1 {
     margin: 0;
     font-size: 3em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Bowlby One SC';
+    font-size: 60px;
 }
 
 .categoryHeader p {
+    font-family: 'Bree Serif';
     font-size: 1.2em;
     margin: 10px 0;
 }
@@ -23,7 +25,7 @@
 }
 
 .specialOffer {
-    background-color:yellow;
+    background-color:#C5FFCB;
     font-size: 1.2em;
     color: black;
     margin: 10px 0;
@@ -181,4 +183,36 @@
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.bannerImg {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity for darkening effect */
+}
+
+.bannerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }

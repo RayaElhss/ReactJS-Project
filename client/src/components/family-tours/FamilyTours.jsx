@@ -5,10 +5,17 @@ export default function FamilyTours() {
     return (
         <div>
             <header className={styles.categoryHeader}>
-                <h1>Family Tours</h1>
-                <p>Fun-filled tours perfect for the whole family. Discover destinations with activities for all ages.</p>
-                <div className={styles.specialOffer}>Special Offer: 50% Off on Family Tours</div>
+                <div className={styles.banner}>
+                    <img src="https://qtxasset.com/quartz/qcloud1/media/image/travelagentcentral/1557940433/familyadventuretravel.jpg?VersionId=aqcgSe54ljtA4iZY1_iOOrlZdr8Z0Kn0" alt="Family Tours" className={styles.bannerImg} />
+                    <div className={styles.overlay}></div>
+                    <div className={styles.bannerContent}>
+                        <h1>Family Tours</h1>
+                        <p>Fun-filled tours perfect for the whole family. Discover destinations with activities for all ages.</p>
+                        <div className={styles.specialOffer}>Special Offer: 50% Off on Family Tours</div>
+                    </div>
+                </div>
             </header>
+
             <section className={styles.toursList}>
                 <div className={styles.tourCard}>
                     <div className="position-relative">
