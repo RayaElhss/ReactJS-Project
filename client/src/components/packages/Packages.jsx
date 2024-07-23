@@ -6,7 +6,7 @@ export default function Packages() {
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    packagesAPI.getAll().then(result => setPackages(result));
+    packagesAPI.getAllPackages().then(result => setPackages(result));
   }, []);
 
   return (

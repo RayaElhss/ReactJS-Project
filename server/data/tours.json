@@ -1,0 +1,62 @@
+{
+    "84e40672-bcac-4201-8b06-a6030e189ccf": {
+        "title": "Weekend Tour",
+        "description": "Enjoy a weekend getaway.",
+        "imageUrl": "img/explore-tour-1.jpg",
+        "offer": "",
+        "offerColor": "",
+        "categoryId": 1,
+        "details": "Details about the Weekend Tour",
+        "_id": "84e40672-bcac-4201-8b06-a6030e189ccf"
+    },
+    "1f18027f-7e42-4c0c-9fcd-9de5fd894da1": {
+        "title": "Road Trip",
+        "description": "Exciting road trips.",
+        "imageUrl": "img/explore-tour-3.jpg",
+        "offer": "15% Off",
+        "offerColor": "info",
+        "categoryId": 1,
+        "details": "Hit the road and discover new places with our thrilling road trip tours.",
+        "_id": "1f18027f-7e42-4c0c-9fcd-9de5fd894da1"
+    },
+    "28b419fb-a571-4ecf-8a02-41577bbdd08e": {
+        "title": "Historical Trip",
+        "description": "Discover historical sites.",
+        "imageUrl": "img/explore-tour-4.jpg",
+        "offer": "",
+        "offerColor": "",
+        "categoryId": 1,
+        "details": "Step back in time and explore the rich history of various destinations with our historical trips.",
+        "_id": "28b419fb-a571-4ecf-8a02-41577bbdd08e"
+    },
+    "b95bfee6-3a73-4ff4-a3ba-bdb13901c49a": {
+        "title": "Family Tour",
+        "description": "Fun for the whole family.",
+        "imageUrl": "img/explore-tour-5.jpg",
+        "offer": "50% Off",
+        "offerColor": "warning",
+        "categoryId": 1,
+        "details": "Enjoy a fun-filled family tour with activities and attractions for all ages.",
+        "_id": "b95bfee6-3a73-4ff4-a3ba-bdb13901c49a"
+    },
+    "1c89261c-e6c3-4a2c-b948-b1b297285753": {
+        "title": "Beach Tour",
+        "description": "Relax on the beach.",
+        "imageUrl": "img/explore-tour-6.jpg",
+        "offer": "",
+        "offerColor": "",
+        "categoryId": 1,
+        "details": "Relax and unwind on pristine beaches with our beach tour packages.",
+        "_id": "1c89261c-e6c3-4a2c-b948-b1b297285753"
+    },
+    "79ef60aa-8a69-4bc3-9afa-47d4d809de37": {
+        "title": "Weekend Tour",
+        "description": "Enjoy a weekend getaway.",
+        "imageUrl": "img/explore-tour-1.jpg",
+        "offer": "",
+        "offerColor": "",
+        "categoryId": 1,
+        "details": "Details about the Weekend Tour",
+        "_id": "79ef60aa-8a69-4bc3-9afa-47d4d809de37"
+    }
+}
