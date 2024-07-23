@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './FamilyTours.module.css';
+import Testimonials from '../testimonials/Testimonials';
 
 export default function FamilyTours() {
     return (
@@ -10,7 +11,6 @@ export default function FamilyTours() {
                     <div className={styles.overlay}></div>
                     <div className={styles.bannerContent}>
                         <h1>Family Tours</h1>
-                        <p>Fun-filled tours perfect for the whole family. Discover destinations with activities for all ages.</p>
                         <div className={styles.specialOffer}>Special Offer: 50% Off on Family Tours</div>
                     </div>
                 </div>
@@ -23,9 +23,7 @@ export default function FamilyTours() {
                         <div className={styles.priceTag}>$649.00</div>
                     </div>
                     <div className={styles.tourDetails}>
-                        <h2>Family Tour</h2>
-                        <p>Fun for the whole family.</p>
-                        <p>Enjoy a fun-filled family tour with activities and attractions for all ages.</p>
+                        <h2>Paris</h2>
                         <div className={`${styles.offer} ${styles.offerWarning}`}>50% Off</div>
                         <button className={styles.btn}>View Details</button>
                     </div>
@@ -36,15 +34,13 @@ export default function FamilyTours() {
                         <div className={styles.priceTag}>$799.00</div>
                     </div>
                     <div className={styles.tourDetails}>
-                        <h2>Adventure Family Tour</h2>
-                        <p>Exciting adventure for the whole family.</p>
-                        <p>Experience thrilling activities and adventures designed for families.</p>
+                        <h2>Italy</h2>
                         <div className={`${styles.offer} ${styles.offerInfo}`}>20% Off</div>
                         <button className={styles.btn}>View Details</button>
                     </div>
                 </div>
             </section>
-            <section className={styles.reviews}>
+            {/* <section className={styles.reviews}>
                 <h2>User Reviews</h2>
                 <div className={styles.review}>
                     <p className={styles.rating}>★★★★★</p>
@@ -56,7 +52,9 @@ export default function FamilyTours() {
                     <p className={styles.comment}>Great experience, but could use more kid-friendly meals.</p>
                     <p className={styles.user}>- John Smith</p>
                 </div>
-            </section>
+            </section> */}
+
+            <Testimonials />
             <section className={styles.additionalInfo}>
                 <h2>Travel Tips</h2>
                 <ul>

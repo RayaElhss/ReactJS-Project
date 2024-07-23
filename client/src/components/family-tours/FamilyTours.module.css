@@ -47,11 +47,6 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.tourImg {
-    width: 100%;
-    height: 250px; /* Adjust this value to make the images longer */
-    object-fit: cover; /* Ensures the image covers the entire area without stretching */
-}
 
 .tourDetails {
     padding: 15px;
@@ -99,6 +94,10 @@
 .reviews, .additionalInfo {
     padding: 20px;
     background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
 }
 
 .reviews h2, .additionalInfo h2 {
@@ -107,6 +106,8 @@
 
 .review, .faq {
     margin: 10px 0;
+    max-width: 600px; /* Optional: limit the width of each review */
+    width: 100%;
 }
 
 .review .rating {
@@ -128,7 +129,7 @@
 
 .tourImg {
     width: 100%;
-    height: 200px; /* Adjust this value to make the images longer */
+    height: 270px; /* Adjust this value to make the images longer */
     object-fit: cover; /* Ensures the image covers the entire area without stretching */
 }
 
