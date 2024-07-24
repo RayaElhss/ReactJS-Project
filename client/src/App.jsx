@@ -27,7 +27,6 @@ function App() {
     <>
       <TopBar />
       <Navbar />
-      <TestTour />
 
       <Routes>
         <Route path="/" element={
@@ -49,6 +48,7 @@ function App() {
         <Route path='/lasvegas' element={<Test />} />
         <Route path='/details' element={<PackageDetails />} />
         <Route path='/tours/:category' element={<FamilyTours />} />
+
       </Routes>
 
       <Footer />
@@ -57,3 +57,5 @@ function App() {
 }
 
 export default App;
+
+
