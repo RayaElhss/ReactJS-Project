@@ -1,6 +1,8 @@
+import styles from './About.module.css';
+
 export default function About() {
     return (
-        <div className="container-fluid about py-5 about-section">
+        <div className={`container-fluid ${styles.aboutSection}`}>
             <div className="container py-5">
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-5">
@@ -20,7 +22,7 @@ export default function About() {
                             background: 'linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png)'
                         }}
                     >
-                        <h5 className="section-about-title pe-3">
+                        <h5 className={`pe-3 ${styles.sectionAboutTitle}`}>
                             About Us
                         </h5>
                         <h1 className="mb-4">

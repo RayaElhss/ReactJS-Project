@@ -1,0 +1,14 @@
+.footer {
+    background: var(--bs-dark);
+}
+
+.footerItem a {
+    line-height: 30px;
+    color: var(--bs-white);
+    transition: 0.5s;
+}
+
+.footerItem a:hover {
+    letter-spacing: 2px;
+    color: var(--bs-primary);
+}

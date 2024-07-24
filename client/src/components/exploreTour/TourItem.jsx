@@ -10,14 +10,14 @@ export default function TourItem({
 }) {
     return (
         <div className="col-md-6 col-lg-4">
-            <div className="national-item">
+             <div className="national-item">
                 <img
                     alt="Image"
                     className="img-fluid w-100 rounded"
                     src={imageUrl}
                 />
                 <div className="national-content">
-                    <div className="national-info">
+                <div className="national-info">
                         <h5 className="text-white text-uppercase mb-2">
                             {title}
                         </h5>
@@ -32,7 +32,7 @@ export default function TourItem({
                 </div>
                 {offer && (
                     <div className={`tour-offer bg-${offerColor}`}>
-                        {offer}
+                        {offer}`
                     </div>
                 )}
                 <div className="national-plus-icon">

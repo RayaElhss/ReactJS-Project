@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './FamilyTours.module.css';
 import Testimonials from '../testimonials/Testimonials';
+import PackageItem from '../packages/package-items/PackageItems';
 
 
 export default function FamilyTours() {
@@ -12,11 +13,28 @@ export default function FamilyTours() {
                         <img src="https://qtxasset.com/quartz/qcloud1/media/image/travelagentcentral/1557940433/familyadventuretravel.jpg?VersionId=aqcgSe54ljtA4iZY1_iOOrlZdr8Z0Kn0" alt="Family Tours" className={styles.bannerImg} />
                         <div className={styles.overlay}></div>
                         <div className={styles.bannerContent}>
-                            <h1>Family Tours</h1>
+                            <div
+                                className="mx-auto text-center mb-5"
+                                style={{
+                                    maxWidth: '900px'
+                                }}
+                            >
+                                <h5 className="section-title px-3">
+                                    Tours
+                                </h5>
+                                <h1 className="mb-4">
+                                    Family tour
+                                </h1>
+                                <p className="mb-0">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto                doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti                eum cum repellat a laborum quasi.
+                                </p>
+                            </div>
                             <div className={styles.specialOffer}>Special Offer: 50% Off on Family Tours</div>
                         </div>
                     </div>
                 </header>
+
+
 
                 <section className={styles.toursList}>
                     <div className={styles.tourCard}>
@@ -42,6 +60,10 @@ export default function FamilyTours() {
                         </div>
                     </div>
                 </section>
+
+
+
+
                 {/* <section className={styles.reviews}>
                 <h2>User Reviews</h2>
                 <div className={styles.review}>

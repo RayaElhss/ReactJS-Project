@@ -1,14 +1,15 @@
 import Copyright from "./Copyright";
+import styles from './Footer.module.css';
 
 export default function Footer() {
     return (
         <>
 
-            <div className="container-fluid footer py-5">
+            <div className={`container-fluid ${styles.footer} py-5`}>
                 <div className="container py-5">
                     <div className="row g-5">
                         <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="footer-item d-flex flex-column">
+                            <div className={`${styles.footerItem} d-flex flex-column`}>
                                 <h4 className="mb-4 text-white">
                                     Get In Touch
                                 </h4>
@@ -61,7 +62,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="footer-item d-flex flex-column">
+                            <div className={`${styles.footerItem} d-flex flex-column`}>
                                 <h4 className="mb-4 text-white">
                                     Company
                                 </h4>
@@ -92,7 +93,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="footer-item d-flex flex-column">
+                            <div className={`${styles.footerItem} d-flex flex-column`}>
                                 <h4 className="mb-4 text-white">
                                     Support
                                 </h4>
@@ -123,7 +124,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-6 col-xl-3">
-                            <div className="footer-item">
+                            <div className={`${styles.footerItem}`}>
                                 <div className="row gy-3 gx-2 mb-4">
                                     <div className="col-xl-6">
                                         <form>

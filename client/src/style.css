@@ -164,7 +164,6 @@
 
 
 
-/* Navbar.css */
 
 .navbar {
     position: sticky;
@@ -432,28 +431,7 @@
 
 /*** About Start ***/
 
-.about-section {
-    background-color: #f0f0f0;
-    /* Change this value to whatever color you prefer */
-}
 
-.about .container .section-about-title {
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    color: var(--bs-primary);
-}
-
-.about .container .section-about-title::before {
-    content: "";
-    width: 50px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-right: -50px;
-    border: 1px solid var(--bs-primary) !important;
-}
 
 /*** About End ***/
 
@@ -1250,31 +1228,6 @@
 
 /*** Subscribe End ***/
 
-/*** Footer Start ***/
-.footer {
-    background: var(--bs-dark);
-}
-
-.footer .footer-item a {
-    line-height: 30px;
-    color: var(--bs-white);
-    transition: 0.5s;
-}
-
-.footer .footer-item a:hover {
-    letter-spacing: 2px;
-    color: var(--bs-primary);
-}
-
-/*** Footer End ***/
-
-/*** copyright Start ***/
-.copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark) !important;
-}
-
-/*** copyright end ***/
 
 /*** register form ***/
 .gradient-custom-3 {
