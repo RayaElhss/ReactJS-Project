@@ -20,15 +20,14 @@ import Search from './components/search/Search';
 import Test from './components/test/Test';
 import PackageDetails from './components/package-details/PackageDetails.jsx';
 import FamilyTours from './components/family-tours/FamilyTours.jsx';
-import FAQs from './components/faqs/FAQs.jsx';
+import TestTour from './components/tours/TestTour';
 
 function App() {
   return (
     <>
       <TopBar />
       <Navbar />
-      <FamilyTours />
-      <FAQs />
+      <TestTour />
 
       <Routes>
         <Route path="/" element={
@@ -49,6 +48,7 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/lasvegas' element={<Test />} />
         <Route path='/details' element={<PackageDetails />} />
+        <Route path='/tours/:category' element={<FamilyTours />} />
       </Routes>
 
       <Footer />

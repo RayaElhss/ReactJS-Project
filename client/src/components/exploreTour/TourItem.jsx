@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function TourItem({
     title,
     description,
     imageUrl,
     offer,
-    offerColor
+    offerColor,
+    category
 }) {
     return (
         <div className="col-md-6 col-lg-4">
@@ -18,13 +21,13 @@ export default function TourItem({
                         <h5 className="text-white text-uppercase mb-2">
                             {title}
                         </h5>
-                        <a
+                        <Link
                             className="btn-hover text-white"
-                            href="#"
+                            to={`/tours/${category}`}
                         >
                             View All Place{' '}
                             <i className="fa fa-arrow-right ms-2" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {offer && (
