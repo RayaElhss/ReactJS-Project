@@ -5,7 +5,7 @@
         "imageUrl": "img/explore-tour-1.jpg",
         "offer": "",
         "offerColor": "",
-        "category": "Weekend",
+        "category": "weekend",
         "details": "Details about the Weekend Tour",
         "_id": "84e40672-bcac-4201-8b06-a6030e189ccf"
     },
@@ -15,7 +15,7 @@
         "imageUrl": "img/explore-tour-3.jpg",
         "offer": "15% Off",
         "offerColor": "info",
-        "category": "RoadTrip",
+        "category": "roadTrip",
         "details": "Hit the road and discover new places with our thrilling road trip tours.",
         "_id": "1f18027f-7e42-4c0c-9fcd-9de5fd894da1"
     },
@@ -25,7 +25,7 @@
         "imageUrl": "img/explore-tour-4.jpg",
         "offer": "",
         "offerColor": "",
-        "category": "Historical",
+        "category": "historical",
         "details": "Step back in time and explore the rich history of various destinations with our historical trips.",
         "_id": "28b419fb-a571-4ecf-8a02-41577bbdd08e"
     },
@@ -35,7 +35,7 @@
         "imageUrl": "img/explore-tour-5.jpg",
         "offer": "50% Off",
         "offerColor": "warning",
-        "category": "Family",
+        "category": "family",
         "details": "Enjoy a fun-filled family tour with activities and attractions for all ages.",
         "_id": "b95bfee6-3a73-4ff4-a3ba-bdb13901c49a"
     },
@@ -45,7 +45,7 @@
         "imageUrl": "img/explore-tour-6.jpg",
         "offer": "",
         "offerColor": "",
-        "category": "Beach",
+        "category": "beach",
         "details": "Relax and unwind on pristine beaches with our beach tour packages.",
         "_id": "1c89261c-e6c3-4a2c-b948-b1b297285753"
     },
@@ -55,7 +55,7 @@
         "imageUrl": "img/explore-tour-1.jpg",
         "offer": "",
         "offerColor": "",
-        "category": "Holiday",
+        "category": "holiday",
         "details": "Details about the Weekend Tour",
         "_id": "79ef60aa-8a69-4bc3-9afa-47d4d809de37"
     }
