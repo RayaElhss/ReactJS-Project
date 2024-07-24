@@ -20,6 +20,7 @@ import Search from './components/search/Search';
 import Test from './components/test/Test';
 import PackageDetails from './components/package-details/PackageDetails.jsx';
 import FamilyTours from './components/family-tours/FamilyTours.jsx';
+import FAQs from './components/faqs/FAQs.jsx';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <TopBar />
       <Navbar />
       <FamilyTours />
+      <FAQs />
 
       <Routes>
         <Route path="/" element={

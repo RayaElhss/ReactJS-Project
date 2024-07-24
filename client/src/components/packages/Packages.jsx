@@ -17,9 +17,12 @@ export default function Packages() {
           <h1 className="mb-0">Awesome Packages</h1>
         </div>
         <div className="d-flex flex-row flex-wrap justify-content-between">
-          {packages.map(packageDeal => (
-            <PackageItem key={packageDeal._id} {...packageDeal} />
-          ))}
+
+          {packages.length > 0
+            ? packages.map(packageDeal => <PackageItem key={packageDeal._id} {...packageDeal} />)
+            : <h3>No any upcoming packages yet!</h3>
+          }
+
         </div>
       </div>
 
