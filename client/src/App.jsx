@@ -25,12 +25,13 @@ function App() {
   return (
     <>
       <TopBar />
+      <Home />
+      <About />
+      <TestTour />
 
       <Routes>
         <Route path="/" element={
           <>
-            <Home />
-            <About />
             <ExploreTour />
             <Packages />
             <Gallery />

@@ -34,7 +34,9 @@ export default function FamilyTours() {
                     </div>
                 </header>
 
-
+                <h2 style={{ marginLeft: '20px', fontFamily: 'Bowlby One SC' }}>
+                    Latest Tours:
+                </h2>
 
                 <section className={styles.toursList}>
                     <div className={styles.tourCard}>
