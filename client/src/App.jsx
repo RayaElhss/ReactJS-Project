@@ -27,7 +27,6 @@ function App() {
       <TopBar />
       <Home />
       <About />
-      <TestTour />
 
       <Routes>
         <Route path="/" element={
