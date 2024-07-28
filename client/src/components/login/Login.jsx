@@ -1,4 +1,23 @@
-export default function Register() {
+import { useNavigate } from "react-router-dom";
+import { useLogin } from "../../hooks/useAuth";
+import { useForm } from "../../hooks/useForm";
+
+export default function Login() {
+    const login = useLogin();
+    const navigate = useNavigate(); 
+    const { values, changeHandler, submitHandler } = useForm(
+        { email: '', password: '' },
+        async ({ email, password }) => {
+            try {
+                await login(email, password)
+                navigate('/');
+            } catch (err) {
+                console.log(err.message);
+            }
+        }
+    );
+
+
     return (
         <section
             className="vh-100 bg-image"
@@ -18,10 +37,14 @@ export default function Register() {
                                 }}
                             >
                                 <div className="card-body p-5">
-                                    <h2 className="text-uppercase text-center mb-5">
-                                        Login here
-                                    </h2>
-                                    <form>
+                                    <h2 className="text-uppercase text-center mb-5"> Login here</h2>
+                                    <form onSubmit={submitHandler}>
+                                        <label
+                                            className="form-label"
+                                            htmlFor="form3Example3cg"
+                                        >
+                                            Email:
+                                        </label>
                                         <div
                                             className="form-outline mb-4"
                                             data-mdb-input-init=""
@@ -30,14 +53,19 @@ export default function Register() {
                                                 className="form-control form-control-lg"
                                                 id="form3Example3cg"
                                                 type="email"
+                                                name="email"
+                                                value={values.email}
+                                                onChange={changeHandler}
+                                                placeholder="raya@gmail.com"
                                             />
-                                            <label
-                                                className="form-label"
-                                                htmlFor="form3Example3cg"
-                                            >
-                                                Your Email
-                                            </label>
+
                                         </div>
+                                        <label
+                                            className="form-label"
+                                            htmlFor="form3Example4cg"
+                                        >
+                                            Password:
+                                        </label>
                                         <div
                                             className="form-outline mb-4"
                                             data-mdb-input-init=""
@@ -46,21 +74,20 @@ export default function Register() {
                                                 className="form-control form-control-lg"
                                                 id="form3Example4cg"
                                                 type="password"
+                                                name="password"
+                                                value={values.password}
+                                                onChange={changeHandler}
+
                                             />
-                                            <label
-                                                className="form-label"
-                                                htmlFor="form3Example4cg"
-                                            >
-                                                Password
-                                            </label>
+
                                         </div>
-                                        
+
                                         <div className="d-flex justify-content-center">
                                             <button
                                                 className="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
                                                 data-mdb-button-init=""
                                                 data-mdb-ripple-init=""
-                                                type="button"
+                                                type="submit"
                                             >
                                                 login
                                             </button>
