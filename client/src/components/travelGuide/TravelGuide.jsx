@@ -210,6 +210,11 @@ export default function TravelGuide() {
                                     </p>
                                 </div>
                             </div>
+                            <div className="d-flex justify-content-center mt-4">
+                    <button type="button" className="btn btn-primary" style={{ backgroundColor: 'grey', color: 'white' }}>
+                        View All Packages
+                    </button>
+                </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,28 @@
+.containerFluid {
+    position: relative;
+    top: -50%;
+    transform: translateY(-50%);
+}
+
+.searchBar {
+    background: rgba(19, 53, 123, 0.8);
+    border-radius: 50px;
+    padding: 1.5rem;
+}
+
+.searchInput {
+    border: 0;
+    border-radius: 20px;
+    width: 90%;
+    height: 15px;
+    padding: 1.5rem 2rem;
+}
+
+.searchButton {
+    position: absolute;
+    right: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}

@@ -1,5 +1,5 @@
 import Navbar from "../navbar/Navbar";
-import Search from "../search/Search";
+// import Search from "../search/Search";
 
 export default function Home() {
     return (
@@ -159,7 +159,7 @@ export default function Home() {
 
             </div>
 
-            <Search />
+            {/* <Search /> */}
 
         </>
     );
