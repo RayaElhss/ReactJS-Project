@@ -21,7 +21,8 @@ export default function Register() {
 
             navigate('/');
         } catch (err) {
-            console.log(err.message);
+            setError(err.message);
+            console.error(err.message);
         }
     };
 
@@ -55,10 +56,7 @@ export default function Register() {
                                     </h2>
 
                                     {error && (
-                                        <div
-                                            className="alert text-center"
-                                            role="alert"
-                                        >
+                                        <div className="alert alert-danger text-center" role="alert">
                                             {error}
                                         </div>
                                     )}
