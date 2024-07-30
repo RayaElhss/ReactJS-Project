@@ -54,11 +54,14 @@ export default function Register() {
                                         Create an account
                                     </h2>
 
-                                    {/* {error && (
-                                        <div className="alert alert-danger text-center" role="alert">
+                                    {error && (
+                                        <div
+                                            className="alert text-center"
+                                            role="alert"
+                                        >
                                             {error}
                                         </div>
-                                    )} */}
+                                    )}
 
                                     <form onSubmit={submitHandler}>
                                         <label
@@ -145,7 +148,7 @@ export default function Register() {
 
                                         </div>
 
-                                   
+
 
 
                                         <div className="d-flex justify-content-center">
