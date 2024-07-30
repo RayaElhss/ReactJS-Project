@@ -285,7 +285,7 @@
 @media (min-width: 992px) {
     .navbar-light {
         position: fixed;
-        top: 0; /* Adjusted top position to be below the topbar */
+        top: 1; /* Adjusted top position to be below the topbar */
         width: 100%;
         z-index: 999; /* Lower than topbar */
     }
