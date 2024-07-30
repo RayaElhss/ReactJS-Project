@@ -43,14 +43,15 @@ function App() {
 
   return (
     <AuthContext.Provider value={contextData}>
-      <TopBar />
-      <Home />
-      <About />
+
 
 
       <Routes>
         <Route path="/" element={
           <>
+            <TopBar />
+            <Home />
+            <About />
             <ExploreTour />
             <Packages />
             <Gallery />
