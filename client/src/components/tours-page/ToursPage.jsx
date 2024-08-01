@@ -1,10 +1,20 @@
-import React from 'react';
+import useTours from '../../hooks/useTours';
 import styles from './ToursPage.module.css';
 import Testimonials from '../testimonials/Testimonials';
-import PackageItem from '../packages/package-items/PackageItems';
 
 
 export default function FamilyTours() {
+
+    const { tours, loading, error } = useTours();
+
+    if (loading) {
+        return <p>Loading tours...</p>;
+    }
+
+    if (error) {
+        return <p>Error loading tours: {error.message}</p>;
+    }
+
     return (
         <>
             <div>
@@ -23,7 +33,7 @@ export default function FamilyTours() {
                                     Tours
                                 </h5>
                                 <h1 className="mb-4">
-                                    Family tour
+                                    {tours.category} tour
                                 </h1>
                                 <p className="mb-0">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto                doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti                eum cum repellat a laborum quasi.

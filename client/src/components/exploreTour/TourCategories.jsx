@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllTours } from "../../api/tourCategories-api";
+import { getAllTourCategories } from "../../api/tourCategories-api";
 import TourItem from "./TourItem";
 
 export default function TourCategories() {
@@ -8,7 +8,7 @@ export default function TourCategories() {
     //const [error, setError] = useState(null);
 
     useEffect(() => {
-        getAllTours().then(result => setTours(result));
+        getAllTourCategories().then(result => setTours(result));
     }, []);
 
     return (
