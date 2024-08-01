@@ -1,0 +1,223 @@
+{
+    "a8ef1d96-a375-4d5f-b2d5-69672a47288b": {
+        "title": "Romantic Paris Experience",
+        "category": "City Tour",
+        "description": "Experience the romance and charm of Paris with our exclusive tour. This comprehensive package takes you through the most iconic landmarks, delightful dining experiences, and offers a glimpse into the artistic and cultural beauty that Paris is renowned for.",
+        "price": 1299,
+        "offer": "10% Off",
+        "offerExpiration": "2024-09-30",
+        "duration": "5 Days / 4 Nights",
+        "images": [
+            "https://www.example.com/images/paris-1.jpg",
+            "https://www.example.com/images/paris-2.jpg",
+            "https://www.example.com/images/paris-3.jpg",
+            "https://www.example.com/images/paris-4.jpg"
+        ],
+        "highlights": [
+            "Visit to the Eiffel Tower with priority access",
+            "Seine River Cruise with dinner",
+            "Guided tour of the Louvre Museum",
+            "Explore the charming neighborhood of Montmartre",
+            "Day trip to Versailles Palace",
+            "Experience a classic Parisian cabaret show"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrival and check-in at the hotel. Evening Seine River Cruise with dinner."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Morning visit to the Eiffel Tower and guided tour of the Louvre Museum."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Walking tour of Montmartre and visit to Notre-Dame Cathedral."
+            },
+            {
+                "day": "Day 4",
+                "activities": "Full-day guided tour to Versailles Palace and Gardens."
+            },
+            {
+                "day": "Day 5",
+                "activities": "Morning at leisure. Departure from Charles de Gaulle Airport."
+            }
+        ],
+        "inclusions": [
+            "Round-trip airport transfers",
+            "4 nights’ accommodation in a 4-star hotel",
+            "Daily breakfast",
+            "Seine River Cruise with dinner",
+            "Priority access to the Eiffel Tower",
+            "Guided tours as per the itinerary",
+            "Dinner and show at the Moulin Rouge"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Personal expenses",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Bring comfortable walking shoes for city tours.",
+            "Learn a few basic French phrases for easier communication."
+        ],
+        "_id": "a8ef1d96-a375-4d5f-b2d5-69672a47288b"
+    },
+    "80706b59-2ead-47bf-a089-4ddf0aaf92f2": {
+        "title": "Venice Weekend Escape",
+        "category": "Weekend Tour",
+        "description": "Enjoy a romantic weekend in Venice, exploring its winding canals, historic landmarks, and vibrant culture. Perfect for a short getaway to one of Italy's most iconic cities.",
+        "price": 699,
+        "offer": "5% Off",
+        "offerExpiration": "2024-10-15",
+        "duration": "3 Days / 2 Nights",
+        "images": [
+            "https://www.example.com/images/venice-1.jpg",
+            "https://www.example.com/images/venice-2.jpg",
+            "https://www.example.com/images/venice-3.jpg",
+            "https://www.example.com/images/venice-4.jpg"
+        ],
+        "highlights": [
+            "Gondola ride through the canals of Venice",
+            "Visit to St. Mark's Basilica and Doge's Palace",
+            "Explore the colorful streets of Burano",
+            "Sample Venetian cuisine at a local trattoria",
+            "Evening stroll across the Rialto Bridge"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrival in Venice. Check-in at the hotel and evening gondola ride."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Morning visit to St. Mark's Basilica and Doge's Palace. Afternoon trip to Burano."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Free time for shopping and departure."
+            }
+        ],
+        "inclusions": [
+            "2 nights’ accommodation in a 4-star hotel",
+            "Daily breakfast",
+            "Gondola ride",
+            "Guided tours as per the itinerary"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Wear comfortable shoes for exploring the city.",
+            "Try to learn a few basic Italian phrases."
+        ],
+        "_id": "80706b59-2ead-47bf-a089-4ddf0aaf92f2"
+    },
+    "056b6820-cf3f-45b1-b54f-3949d8c4253a": {
+        "title": "Tokyo Weekend Adventure",
+        "category": "Weekend Tour",
+        "description": "Experience the excitement of Tokyo over a weekend. This tour offers a quick but immersive glimpse into Japan's bustling capital, from high-tech districts to serene gardens.",
+        "price": 799,
+        "offer": "8% Off",
+        "offerExpiration": "2024-11-30",
+        "duration": "3 Days / 2 Nights",
+        "images": [
+            "https://www.example.com/images/tokyo-1.jpg",
+            "https://www.example.com/images/tokyo-2.jpg",
+            "https://www.example.com/images/tokyo-3.jpg",
+            "https://www.example.com/images/tokyo-4.jpg"
+        ],
+        "highlights": [
+            "Visit to Tokyo Tower and Skytree",
+            "Explore the vibrant district of Akihabara",
+            "Relax in Ueno Park",
+            "Shopping in Shibuya and Harajuku",
+            "Enjoy traditional Japanese cuisine"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrival in Tokyo. Evening visit to Tokyo Tower and dinner at a local restaurant."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Morning visit to Akihabara. Afternoon stroll in Ueno Park and shopping in Shibuya."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Free time for exploring Harajuku and departure."
+            }
+        ],
+        "inclusions": [
+            "2 nights’ accommodation in a 4-star hotel",
+            "Daily breakfast",
+            "Tokyo Tower entry",
+            "Guided tours as per the itinerary"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Use public transportation for easy access around the city.",
+            "Be respectful of local customs and etiquette."
+        ],
+        "_id": "056b6820-cf3f-45b1-b54f-3949d8c4253a"
+    },
+    "7648efda-34a2-478e-a4b9-073b3dd05234": {
+        "title": "Barcelona Weekend Delight",
+        "category": "Weekend Tour",
+        "description": "Immerse yourself in the vibrant culture of Barcelona. This weekend tour offers a glimpse into the artistic and architectural wonders of this iconic Spanish city.",
+        "price": 749,
+        "offer": "12% Off",
+        "offerExpiration": "2024-09-20",
+        "duration": "3 Days / 2 Nights",
+        "images": [
+            "https://www.example.com/images/barcelona-1.jpg",
+            "https://www.example.com/images/barcelona-2.jpg",
+            "https://www.example.com/images/barcelona-3.jpg",
+            "https://www.example.com/images/barcelona-4.jpg"
+        ],
+        "highlights": [
+            "Visit to Sagrada Familia",
+            "Explore Park Güell and its artistic landscapes",
+            "Stroll down La Rambla",
+            "Enjoy tapas in the Gothic Quarter",
+            "Visit to the Picasso Museum"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrival in Barcelona. Evening free for leisure."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Visit to Sagrada Familia and Park Güell. Evening tapas tour in the Gothic Quarter."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Visit to the Picasso Museum and free time for shopping on La Rambla before departure."
+            }
+        ],
+        "inclusions": [
+            "2 nights’ accommodation in a 4-star hotel",
+            "Daily breakfast",
+            "Sagrada Familia entry ticket",
+            "Guided tours as per the itinerary"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Explore local markets for unique souvenirs.",
+            "Take advantage of Barcelona's extensive public transport system."
+        ],
+        "_id": "7648efda-34a2-478e-a4b9-073b3dd05234"
+    }
+}
