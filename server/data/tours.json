@@ -1,7 +1,7 @@
 {
     "a8ef1d96-a375-4d5f-b2d5-69672a47288b": {
         "title": "Romantic Paris Experience",
-        "category": "City Tour",
+        "category": "Weekend",
         "description": "Experience the romance and charm of Paris with our exclusive tour. This comprehensive package takes you through the most iconic landmarks, delightful dining experiences, and offers a glimpse into the artistic and cultural beauty that Paris is renowned for.",
         "price": 1299,
         "offer": "10% Off",
@@ -64,9 +64,10 @@
         ],
         "_id": "a8ef1d96-a375-4d5f-b2d5-69672a47288b"
     },
+
     "80706b59-2ead-47bf-a089-4ddf0aaf92f2": {
         "title": "Venice Weekend Escape",
-        "category": "Weekend Tour",
+        "category": "Weekend",
         "description": "Enjoy a romantic weekend in Venice, exploring its winding canals, historic landmarks, and vibrant culture. Perfect for a short getaway to one of Italy's most iconic cities.",
         "price": 699,
         "offer": "5% Off",
@@ -116,9 +117,10 @@
         ],
         "_id": "80706b59-2ead-47bf-a089-4ddf0aaf92f2"
     },
+
     "056b6820-cf3f-45b1-b54f-3949d8c4253a": {
         "title": "Tokyo Weekend Adventure",
-        "category": "Weekend Tour",
+        "category": "Weekend",
         "description": "Experience the excitement of Tokyo over a weekend. This tour offers a quick but immersive glimpse into Japan's bustling capital, from high-tech districts to serene gardens.",
         "price": 799,
         "offer": "8% Off",
@@ -168,9 +170,10 @@
         ],
         "_id": "056b6820-cf3f-45b1-b54f-3949d8c4253a"
     },
+
     "7648efda-34a2-478e-a4b9-073b3dd05234": {
         "title": "Barcelona Weekend Delight",
-        "category": "Weekend Tour",
+        "category": "Weekend",
         "description": "Immerse yourself in the vibrant culture of Barcelona. This weekend tour offers a glimpse into the artistic and architectural wonders of this iconic Spanish city.",
         "price": 749,
         "offer": "12% Off",

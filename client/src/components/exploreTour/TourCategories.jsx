@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllTours } from "../../api/tours-api";
+import { getAllTours } from "../../api/tourCategories-api";
 import TourItem from "./TourItem";
 
 export default function TourCategories() {

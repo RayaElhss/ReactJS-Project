@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FamilyTours.module.css';
+import styles from './ToursPage.module.css';
 import Testimonials from '../testimonials/Testimonials';
 import PackageItem from '../packages/package-items/PackageItems';
 
