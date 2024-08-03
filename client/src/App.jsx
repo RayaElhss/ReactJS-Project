@@ -20,10 +20,13 @@ import Login from './components/login/Login';
 import Profile from './components/profile/Profile';
 import Test from './components/test/Test';
 import PackageDetails from './components/package-details/PackageDetails.jsx';
-import FamilyTours from './components/family-tours/FamilyTours.jsx';
-import TestTour from './components/tours/TestTour';
+import ToursPage from './components/tours-page/ToursPage.jsx';
 import Home from './components/home-item/Home.jsx';
 import { AuthContext } from './contexts/AuthContext.js';
+import Testimonials from './components/testimonials/Testimonials.jsx';
+import GptTest from './components/gptTest/GptTest.jsx';
+import Modal from './components/modal/Modal.jsx';
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   const [authState, setAuthState] = useState({});
@@ -43,35 +46,34 @@ function App() {
 
   return (
     <AuthContext.Provider value={contextData}>
-
-
-
-      <Routes>
-        <Route path="/" element={
-          <>
-            <TopBar />
-            <Home />
-            <About />
-            <ExploreTour />
-            <Packages />
-            <Gallery />
-            <ShareAdventures />
-            <TravelGuide />
-            <OurBlog />
-          </>
-        } />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/lasvegas' element={<Test />} />
-        <Route path='/details' element={<PackageDetails />} />
-        <Route path='/tours/:category' element={<FamilyTours />} />
-
-      </Routes>
+      <TopBar />
+      <Navbar />
+      <Home />
+      <About />
+      <ExploreTour />
+      <Packages />
+      <div className="main-content">
+        <Routes>
+          {/* Define a route for each component with a unique path */}
+          <Route path="/about" element={<About />} />
+          <Route path="/explore-tour" element={<ExploreTour />} />
+          <Route path="/packages" element={<Packages />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/share-adventures" element={<ShareAdventures />} />
+          <Route path="/travel-guide" element={<TravelGuide />} />
+          <Route path="/our-blog" element={<OurBlog />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="/details" element={<PackageDetails />} />
+          <Route path="/tourCategories/:category" element={<ToursPage />} />
+        </Routes>
+      </div>
 
       <Footer />
     </AuthContext.Provider>
-
   );
 }
 

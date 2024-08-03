@@ -23,7 +23,7 @@ export default function TourItem({
                         </h5>
                         <Link
                             className="btn-hover text-white"
-                            to={`/tours/${category}`}
+                            to={`/tourCategories/${category}`}
                         >
                             View All Place{' '}
                             <i className="fa fa-arrow-right ms-2" />

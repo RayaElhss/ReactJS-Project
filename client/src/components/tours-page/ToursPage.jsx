@@ -1,11 +1,28 @@
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import useTours from '../../hooks/useTours';
 import styles from './ToursPage.module.css';
 import Testimonials from '../testimonials/Testimonials';
+import Tours from './tours/Tours';
+import * as toursAPI from '../../api/tourCategories-api';
 
 
-export default function FamilyTours() {
+export default function ToursPage({ description }) {
+    const { category } = useParams();
+    console.log("Category from URL:", category);
 
-    const { tours, loading, error } = useTours();
+    const [tours, setTours] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+
+    useEffect(() => {
+        toursAPI.getAllTourCategories().then(result => {
+            setTours(result);
+            setLoading(false);
+        })
+    }, [])
+
 
     if (loading) {
         return <p>Loading tours...</p>;
@@ -15,99 +32,56 @@ export default function FamilyTours() {
         return <p>Error loading tours: {error.message}</p>;
     }
 
+    // Filter tours based on the category from the URL
+    const filteredTours = tours.filter(tour => tour.category.toLowerCase() === category.toLowerCase());
+
+    const tourDetails = filteredTours.length > 0 ? filteredTours[0] : {};
+
+    console.log('Filtered Tours:', filteredTours);
+
     return (
-        <>
-            <div>
-                <header className={styles.categoryHeader}>
-                    <div className={styles.banner}>
-                        <img src="https://qtxasset.com/quartz/qcloud1/media/image/travelagentcentral/1557940433/familyadventuretravel.jpg?VersionId=aqcgSe54ljtA4iZY1_iOOrlZdr8Z0Kn0" alt="Family Tours" className={styles.bannerImg} />
-                        <div className={styles.overlay}></div>
-                        <div className={styles.bannerContent}>
-                            <div
-                                className="mx-auto text-center mb-5"
-                                style={{
-                                    maxWidth: '900px'
-                                }}
-                            >
-                                <h5 className="section-title px-3">
-                                    Tours
-                                </h5>
-                                <h1 className="mb-4">
-                                    {tours.category} tour
-                                </h1>
-                                <p className="mb-0">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto                doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti                eum cum repellat a laborum quasi.
-                                </p>
+        <div>
+            <header className={styles.categoryHeader}>
+                <div className={styles.banner}>
+                    <img src={tourDetails.imageUrl} alt="{category} Tours" className={styles.bannerImg} />
+                    <div className={styles.overlay}></div>
+                    <div className={styles.bannerContent}>
+                        <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
+                            <h5 className="section-title px-3">
+                                Tours
+                            </h5>
+                            <h1 className="mb-4">
+                                {category} Tours
+                            </h1>
+                            <p className="mb-0">
+                                {tourDetails.description}
+                            </p>
+                        </div>
+                        {tourDetails.offer && (
+                            <div className={styles.specialOffer}>
+                                Special Offer: {tourDetails.offer} Off on {category} Tours
                             </div>
-                            <div className={styles.specialOffer}>Special Offer: 50% Off on Family Tours</div>
-                        </div>
+                        )}
                     </div>
-                </header>
-
-                <h2 style={{ marginLeft: '20px', fontFamily: 'Bowlby One SC' }}>
-                    Latest Tours:
-                </h2>
-
-                <section className={styles.toursList}>
-                    <div className={styles.tourCard}>
-                        <div className="position-relative">
-                            <img src="/img/explore-tour-5.jpg" alt="Family Tour" className={`${styles.tourImg} img-fluid rounded-start`} />
-                            <div className={styles.priceTag}>$649.00</div>
-                        </div>
-                        <div className={styles.tourDetails}>
-                            <h2>Paris</h2>
-                            <div className={`${styles.offer} ${styles.offerWarning}`}>50% Off</div>
-                            <button className={styles.btn}>View Details</button>
-                        </div>
-                    </div>
-                    <div className={styles.tourCard}>
-                        <div className="position-relative">
-                            <img src="/img/explore-tour-4.jpg" alt="Adventure Family Tour" className={`${styles.tourImg} img-fluid rounded-start`} />
-                            <div className={styles.priceTag}>$799.00</div>
-                        </div>
-                        <div className={styles.tourDetails}>
-                            <h2>Italy</h2>
-                            <div className={`${styles.offer} ${styles.offerInfo}`}>20% Off</div>
-                            <button className={styles.btn}>View Details</button>
-                        </div>
-                    </div>
-                </section>
-
-
-
-
-                {/* <section className={styles.reviews}>
-                <h2>User Reviews</h2>
-                <div className={styles.review}>
-                    <p className={styles.rating}>★★★★★</p>
-                    <p className={styles.comment}>Amazing family trip! The kids loved it.</p>
-                    <p className={styles.user}>- Jane Doe</p>
                 </div>
-                <div className={styles.review}>
-                    <p className={styles.rating}>★★★★☆</p>
-                    <p className={styles.comment}>Great experience, but could use more kid-friendly meals.</p>
-                    <p className={styles.user}>- John Smith</p>
-                </div>
-            </section> */}
+            </header>
 
-                <Testimonials />
-                <section className={styles.additionalInfo}>
-                    <h2>Travel Tips</h2>
-                    <ul>
-                        <li>Pack light but bring essentials for kids.</li>
-                        <li>Best time to visit is during school holidays.</li>
-                    </ul>
-                    <h2>FAQs</h2>
-                    <div className={styles.faq}>
-                        <p className={styles.question}>Q: Are meals included?</p>
-                        <p className={styles.answer}>A: Yes, meals are included in the package.</p>
-                    </div>
-                    <div className={styles.faq}>
-                        <p className={styles.question}>Q: Is there a discount for children?</p>
-                        <p className={styles.answer}>A: Children under 5 travel free.</p>
-                    </div>
-                </section>
-            </div>
-        </>
+            <h2 style={{ marginLeft: '20px', fontFamily: 'Bowlby One SC' }}>
+                Latest Tours:
+            </h2>
+
+            {/* Pass the filtered tours to the Tours component */}
+            <Tours tours={filteredTours} />
+
+            <Testimonials />
+
+            <section className={styles.additionalInfo}>
+                <h2>Travel Tips</h2>
+                <ul>
+                    <li>Pack light but bring essentials for kids.</li>
+                    <li>Best time to visit is during school holidays.</li>
+                </ul>
+            </section>
+        </div>
     );
 }
