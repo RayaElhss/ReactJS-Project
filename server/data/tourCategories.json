@@ -2,17 +2,17 @@
     "84e40672-bcac-4201-8b06-a6030e189ccf": {
         "title": "Weekend Tour",
         "description": "Enjoy a weekend getaway.",
-        "imageUrl": "img/explore-tour-1.jpg",
+        "imageUrl": "https://cf.ltkcdn.net/family/images/std/200821-800x533r1-family.jpg",
         "offer": "",
         "offerColor": "",
-        "category": "weekend",
+        "category": "Weekend",
         "details": "Details about the Weekend Tour",
         "_id": "84e40672-bcac-4201-8b06-a6030e189ccf"
     },
     "1f18027f-7e42-4c0c-9fcd-9de5fd894da1": {
         "title": "Road Trip",
         "description": "Exciting road trips.",
-        "imageUrl": "img/explore-tour-3.jpg",
+        "imageUrl": "https://www.oyorooms.com/travel-guide/wp-content/uploads/2021/07/DestinationsNearDelhi_1-1.jpg",
         "offer": "15% Off",
         "offerColor": "info",
         "category": "roadTrip",
@@ -22,7 +22,7 @@
     "28b419fb-a571-4ecf-8a02-41577bbdd08e": {
         "title": "Historical Trip",
         "description": "Discover historical sites.",
-        "imageUrl": "img/explore-tour-4.jpg",
+        "imageUrl": "https://culturetourist.com/wp-content/uploads/2022/03/History-of-Travelling-Camel-in-front-of-pyramid.webp",
         "offer": "",
         "offerColor": "",
         "category": "historical",
@@ -32,7 +32,7 @@
     "b95bfee6-3a73-4ff4-a3ba-bdb13901c49a": {
         "title": "Family Tour",
         "description": "Fun for the whole family.",
-        "imageUrl": "img/explore-tour-5.jpg",
+        "imageUrl": "https://cdn.tourradar.com/s3/content-pages/518/840x612/lea5ds.png",
         "offer": "50% Off",
         "offerColor": "warning",
         "category": "family",
@@ -42,7 +42,7 @@
     "1c89261c-e6c3-4a2c-b948-b1b297285753": {
         "title": "Beach Tour",
         "description": "Relax on the beach.",
-        "imageUrl": "img/explore-tour-6.jpg",
+        "imageUrl": "https://deea5f37acb81f8c11a0-e1b5c6fca8c8b75d961e21f3e05d43ba.ssl.cf1.rackcdn.com/u/_blog/beach-lovers-in-finest-punta-cana.jpg",
         "offer": "",
         "offerColor": "",
         "category": "beach",
@@ -52,7 +52,7 @@
     "79ef60aa-8a69-4bc3-9afa-47d4d809de37": {
         "title": "Holiday Tour",
         "description": "Enjoy a weekend getaway.",
-        "imageUrl": "img/explore-tour-1.jpg",
+        "imageUrl": "https://cdn.tourradar.com/s3/content-pages/456/840x612/SesMVV.jpg",
         "offer": "",
         "offerColor": "",
         "category": "holiday",
