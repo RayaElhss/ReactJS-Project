@@ -1,26 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import useTours from '../../hooks/useTours';
 import styles from './ToursPage.module.css';
 import Testimonials from '../testimonials/Testimonials';
 import Tours from './tours/Tours';
-import * as toursAPI from '../../api/tourCategories-api';
+import * as tourCategoriesAPI from '../../api/tourCategories-api';
+import * as toursAPI from '../../api/tours-api';
 
 
 export default function ToursPage({ description }) {
     const { category } = useParams();
     console.log("Category from URL:", category);
 
+    const [tourCategories, setTourCategories] = useState([]);
     const [tours, setTours] = useState([]);
+
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
 
     useEffect(() => {
-        toursAPI.getAllTourCategories().then(result => {
-            setTours(result);
-            setLoading(false);
-        })
+        tourCategoriesAPI.getAllTourCategories().then(result => {
+            setTourCategories(result);
+            // setLoading(false);
+        }).catch(err => {
+            console.error(err);
+            setError(err);
+        });
+
+        toursAPI.getAllTours()
+            .then(result => {
+                setTours(result);
+            })
+            .catch(err => {
+                console.error(err);
+                setError(err);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+
     }, [])
 
 
@@ -33,17 +51,20 @@ export default function ToursPage({ description }) {
     }
 
     // Filter tours based on the category from the URL
+    const filteredTourCategories = tourCategories.filter(tour => tour.category.toLowerCase() === category.toLowerCase());
     const filteredTours = tours.filter(tour => tour.category.toLowerCase() === category.toLowerCase());
 
-    const tourDetails = filteredTours.length > 0 ? filteredTours[0] : {};
+    const tourDetails = filteredTourCategories.length > 0 ? filteredTourCategories[0] : {};
 
+    console.log('Filtered Tour Categories:', filteredTourCategories);
     console.log('Filtered Tours:', filteredTours);
+
 
     return (
         <div>
             <header className={styles.categoryHeader}>
                 <div className={styles.banner}>
-                    <img src={tourDetails.imageUrl} alt="{category} Tours" className={styles.bannerImg} />
+                    <img src={tourDetails.imageUrl} alt={`${category} Tours className=${styles.bannerImg}`} />
                     <div className={styles.overlay}></div>
                     <div className={styles.bannerContent}>
                         <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
