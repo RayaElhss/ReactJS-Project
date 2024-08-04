@@ -38,7 +38,8 @@
         "price": "890.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
         "_id": "de25adee-3962-45dd-a13e-cbf1b1b478fc"
-    },"88c2ee36-7bae-47ed-999b-4ee6ab6a3617": {
+    },
+    "88c2ee36-7bae-47ed-999b-4ee6ab6a3617": {
         "country": "Brazil",
         "city": "Rio De Janeiro",
         "imageUrl": "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
@@ -57,5 +58,15 @@
         "price": "890.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
         "_id": "a59eec8b-9226-48f2-b43a-987312cf2173"
+    },
+    "c6bc68b6-5e95-47a2-b125-9f35c8c5029b": {
+        "country": "Algeria",
+        "city": "Algeria",
+        "imageUrl": "https://cdn.mappr.co/wp-content/uploads/2023/05/The-Capital-of-Algeria-Algiers.jpg",
+        "duration": "7",
+        "peopleCount": "4",
+        "price": "200.00",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "_id": "c6bc68b6-5e95-47a2-b125-9f35c8c5029b"
     }
 }

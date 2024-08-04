@@ -47,25 +47,26 @@ function App() {
     <AuthContext.Provider value={contextData}>
       <TopBar />
       <Navbar />
-      
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/explore-tour" element={<ExploreTour />} />
-          <Route path="/packages" element={<Packages />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/share-adventures" element={<ShareAdventures />} />
-          <Route path="/travel-guide" element={<TravelGuide />} />
-          <Route path="/our-blog" element={<OurBlog />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="/details" element={<PackageDetails />} />
-          <Route path="/tourCategories/:category" element={<ToursPage />} />
-          <Route path="/tours/:id" element={<TourDetails />} />
-        </Routes>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/explore-tour" element={<ExploreTour />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/share-adventures" element={<ShareAdventures />} />
+        <Route path="/travel-guide" element={<TravelGuide />} />
+        <Route path="/our-blog" element={<OurBlog />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/test" element={<Test />} />
+        <Route path="/details" element={<PackageDetails />} />
+        <Route path="/tourCategories/:category" element={<ToursPage />} />
+        <Route path="/tours/:id" element={<TourDetails />} />
+        <Route path="/allPackages" element={<Packages />} /> {/* Page showing all packages */}
+      </Routes>
 
       <Footer />
     </AuthContext.Provider>

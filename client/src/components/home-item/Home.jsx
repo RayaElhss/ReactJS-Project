@@ -173,12 +173,13 @@ export default function Home() {
 
             <About />
             <ExploreTour />
-            <Packages />
+            <Packages /> {/* Homepage showing only 6 packages */}
             <Gallery />
             <ShareAdventures />
             <TravelGuide />
             <OurBlog />
             <Testimonials />
+            
         </>
     );
 }
