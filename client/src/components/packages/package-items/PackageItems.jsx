@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from '../../modal/Modal';
 
 export default function PackageItem({
     _id,
@@ -73,17 +74,10 @@ export default function PackageItem({
                 <div className="row bg-primary rounded-bottom mx-0">
                     <div className="col-6 text-start px-0">
                         <Link to={`/packages/${_id}`} className="btn-hover btn text-white py-2 px-4">
-                            Read More
+                            View
                         </Link>
                     </div>
-                    <div className="col-6 text-end px-0">
-                        <a
-                            className="btn-hover btn text-white py-2 px-4"
-                            href="#"
-                        >
-                            Book Now
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
         </div>

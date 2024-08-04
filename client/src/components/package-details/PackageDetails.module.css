@@ -1,16 +1,23 @@
 .container {
-  width: 90%; /* Increase the width to 90% of the viewport */
-  max-width: 1200px; /* Increase the max-width for a larger container */
+  width: 90%;
+  /* Increase the width to 90% of the viewport */
+  max-width: 1200px;
+  /* Increase the max-width for a larger container */
   margin: 40px auto;
   overflow: hidden;
   font-family: Arial, sans-serif;
-  background-color: #2B8AD9 ; /* Light gray background */
-  padding: 20px; /* Add padding for better layout */
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+  background-color: #2B8AD9;
+  /* Light gray background */
+  padding: 20px;
+  /* Add padding for better layout */
+  border-radius: 8px;
+  /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: add shadow for depth */
 }
 
-.header, .packageInfo {
+.header,
+.packageInfo {
   background: #333;
   color: #fff;
   padding: 20px 0;
@@ -18,24 +25,31 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.header h1, .packageInfo h2 {
+.header h1,
+.packageInfo h2 {
   margin: 0;
   font-size: 2.5rem;
 }
 
 .gallery {
   margin: 20px 0;
-  border-radius: 8px; /* Rounded corners for carousel */
+  border-radius: 8px;
+  /* Rounded corners for carousel */
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow */
   width: 200%;
-  max-width: 800px; /* Limit the width of the carousel */
-  height: 400px; /* Reduce the height of the carousel */
-  margin: 20px auto; /* Center the carousel */
+  max-width: 800px;
+  /* Limit the width of the carousel */
+  height: 400px;
+  /* Reduce the height of the carousel */
+  margin: 20px auto;
+  /* Center the carousel */
 }
 
 .carousel .slider-wrapper {
-  border-radius: 8px; /* Ensure carousel slides also have rounded corners */
+  border-radius: 8px;
+  /* Ensure carousel slides also have rounded corners */
 }
 
 .packageInfo {
@@ -56,9 +70,12 @@
 }
 
 .price {
-  color: red; /* Set the price text to red */
-  font-weight: bold; /* Optionally make the price bold */
+  color: red;
+  /* Set the price text to red */
+  font-weight: bold;
+  /* Optionally make the price bold */
 }
+
 .infoItem {
   display: flex;
   justify-content: space-between;
@@ -88,23 +105,32 @@
 
 
 .infoItem.description {
-  flex-direction: column; /* Stack label and text */
-  align-items: center; /* Align text to the start of the container */
+  flex-direction: column;
+  /* Stack label and text */
+  align-items: center;
+  /* Align text to the start of the container */
 }
 
 .infoItem.description span {
-  width: 100%; /* Ensure the text takes full width */
-  text-align: center; /* Align the text to the left for multiline */
-  margin-top: 10px; /* Add space between label and text */
+  width: 100%;
+  /* Ensure the text takes full width */
+  text-align: center;
+  /* Align the text to the left for multiline */
+  margin-top: 10px;
+  /* Add space between label and text */
 }
 
 
 .descriptionItem {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Arrange items in a column */
-  text-align: center; /* Center text inside the div */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  flex-direction: column;
+  /* Arrange items in a column */
+  text-align: center;
+  /* Center text inside the div */
   padding: 20px;
   margin: 20px 0;
 }
@@ -116,7 +142,8 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 40px 0; /* Consistent margin with other sections */
+  margin: 40px 0;
+  /* Consistent margin with other sections */
 }
 
 .itinerary h2 {
@@ -148,15 +175,40 @@
 .header {
   background: #0900C2;
   color: #fff;
-  padding: 5px 5px; /* Reduce padding for a more compact header */
+  padding: 5px 5px;
+  /* Reduce padding for a more compact header */
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Keep the subtle shadow */
-  max-width: 650px; /* Limit the width of the header */
-  margin: 0 auto 20px; /* Center the header and add bottom margin */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Keep the subtle shadow */
+  max-width: 650px;
+  /* Limit the width of the header */
+  margin: 0 auto 20px;
+  /* Center the header and add bottom margin */
 }
 
 .header h1 {
   margin: 0;
-  font-size: 1.8rem; /* Reduce font size for a smaller header */
-  line-height: 1.4; /* Adjust line height for better readability */
+  font-size: 1.8rem;
+  /* Reduce font size for a smaller header */
+  line-height: 1.4;
+  /* Adjust line height for better readability */
+}
+
+.backButton {
+  position: absolute; /* Use absolute positioning to move it freely */
+  top: 70px; /* Adjust the top position to move the button down */
+  left: 20px; /* Keep it aligned to the left */
+  background-color: #F1F1F1;
+  color: #333;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px; /* Adjust padding for better spacing */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 1000; /* Ensure the button is on top of other elements */
+}
+
+.backButton:hover {
+  color: #55107c; /* Change color on hover */
 }
