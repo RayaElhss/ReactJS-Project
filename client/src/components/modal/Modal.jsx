@@ -22,12 +22,12 @@ export default function Modal() {
                     role="document"
                 >
                     <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-header d-flex justify-content-between">
                             <h5
                                 className="modal-title"
                                 id="exampleModalCenterTitle"
                             >
-                                Modal title
+                                Book now
                             </h5>
                             <button
                                 aria-label="Close"
@@ -41,21 +41,16 @@ export default function Modal() {
                             </button>
                         </div>
                         <div className="modal-body">
-                            ...
+                            <p style={{ fontSize: '1.25rem', fontFamily: 'cursive' }}>Send us an email! <br /> <span style={{ color: '#FF5733' }}>tripTales@gmail.com</span></p>
                         </div>
                         <div className="modal-footer">
+                           
                             <button
-                                className="btn btn-secondary"
+                                className="btn btn-primary close"
+                                type="button"
                                 data-dismiss="modal"
-                                type="button"
                             >
-                                Close
-                            </button>
-                            <button
-                                className="btn btn-primary"
-                                type="button"
-                            >
-                                Save changes
+                                OK
                             </button>
                         </div>
                     </div>
