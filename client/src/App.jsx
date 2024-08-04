@@ -25,7 +25,6 @@ import Home from './components/home-item/Home.jsx';
 import { AuthContext } from './contexts/AuthContext.js';
 import Testimonials from './components/testimonials/Testimonials.jsx';
 import TourDetails from './components/tour-details/TourDetails.jsx';
-import Modal from './components/modal/Modal.jsx';
 import Navbar from "./components/navbar/Navbar";
 
 function App() {
@@ -48,13 +47,9 @@ function App() {
     <AuthContext.Provider value={contextData}>
       <TopBar />
       <Navbar />
-      <Home />
-      <About />
-      <ExploreTour />
-      <Packages />
-      <div className="main-content">
+      
         <Routes>
-          {/* Define a route for each component with a unique path */}
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/explore-tour" element={<ExploreTour />} />
           <Route path="/packages" element={<Packages />} />
@@ -71,7 +66,6 @@ function App() {
           <Route path="/tourCategories/:category" element={<ToursPage />} />
           <Route path="/tours/:id" element={<TourDetails />} />
         </Routes>
-      </div>
 
       <Footer />
     </AuthContext.Provider>

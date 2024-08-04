@@ -1,11 +1,20 @@
-import Navbar from "../navbar/Navbar";
 // import Search from "../search/Search";
+
+import About from "../about/About";
+import ExploreTour from "../exploreTour/ExploreTour";
+import Gallery from "../gallery/Gallery";
+import OurBlog from "../ourBlog/OurBlog";
+import Packages from "../packages/Packages";
+import ShareAdventures from "../shareAdventures/ShareAdventures";
+import Testimonials from "../testimonials/Testimonials";
+import TravelGuide from "../travelGuide/TravelGuide";
 
 export default function Home() {
     return (
         <>
 
-            <Navbar />
+
+
             <div className="carousel-header">
                 <div
                     className="carousel slide"
@@ -161,6 +170,15 @@ export default function Home() {
 
             {/* <Search /> */}
 
+
+            <About />
+            <ExploreTour />
+            <Packages />
+            <Gallery />
+            <ShareAdventures />
+            <TravelGuide />
+            <OurBlog />
+            <Testimonials />
         </>
     );
 }
