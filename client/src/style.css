@@ -169,6 +169,7 @@
     position: sticky;
     z-index: 900;
     margin-top: 0px; /* Adjust this value based on the height of your topbar */
+    padding: 100px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -569,6 +570,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     z-index: 1;
+    height: 270px;
   }
   
   .packages .packages-item .packages-img .packages-info {
@@ -652,6 +654,7 @@
 
 /* National Tour Start */
 .ExploreTour #NationalTab-1 .national-item {
+    height: 250px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
