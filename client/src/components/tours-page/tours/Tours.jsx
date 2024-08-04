@@ -24,8 +24,9 @@ export default function Tours({ tours }) {
                     </div>
                 ))
             ) : (
-                <p>No tours available for this category.</p>
-            )}
+                <p style={{ fontSize: '20px', fontFamily: 'Arial, sans-serif' }}>
+                    No tours available for this category.
+                </p>)}
         </section>
     );
 }
