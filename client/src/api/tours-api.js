@@ -9,3 +9,7 @@ export const getAllTours = async () => {
 
     return tours;
 }
+
+export const getTourById = async (id) => {
+    return await request.get(`${baseUrl}/${id}`);
+}
