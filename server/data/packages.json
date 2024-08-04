@@ -2,71 +2,218 @@
     "3fbbc42f-d187-434a-ad89-f7b394ee8829": {
         "country": "Italy",
         "city": "Venice",
-        "imageUrl": "img/packages-4.jpg",
+        "imageUrl": [
+            "img/packages-4.jpg",
+            "https://via.placeholder.com/800x400",
+            "https://via.placeholder.com/800x400"
+        ],
         "duration": "3",
         "peopleCount": "2",
         "price": "349.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "_id": "3fbbc42f-d187-434a-ad89-f7b394ee8829"
     },
     "9ff73d54-eed9-45a7-aa17-b54867d88756": {
         "country": "Morocco",
         "city": "Rabat",
-        "imageUrl": "img/packages-3.jpg",
+        "imageUrl": [
+            "img/packages-3.jpg",
+            "https://via.placeholder.com/800x400",
+            "https://via.placeholder.com/800x400"
+        ],
         "duration": "7",
         "peopleCount": "4",
         "price": "500.00",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
         "_id": "9ff73d54-eed9-45a7-aa17-b54867d88756"
     },
     "e06cad43-c850-4eb6-a8cb-10f9d0f291ad": {
         "country": "Greece",
         "city": "Santorini",
-        "imageUrl": "https://img.veenaworld.com/wp-content/uploads/2023/05/Top-Ten-Hotels-in-Santorini.jpg",
+        "imageUrl": [
+            "https://img.veenaworld.com/wp-content/uploads/2023/05/Top-Ten-Hotels-in-Santorini.jpg",
+            "https://via.placeholder.com/800x400",
+            "https://via.placeholder.com/800x400"
+        ],
         "duration": "5",
         "peopleCount": "2",
         "price": "800.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "_id": "e06cad43-c850-4eb6-a8cb-10f9d0f291ad"
     },
     "de25adee-3962-45dd-a13e-cbf1b1b478fc": {
         "country": "Brazil",
         "city": "Rio De Janeiro",
-        "imageUrl": "img/packages-4.jpg",
+        "imageUrl": [
+            "img/packages-4.jpg",
+            "https://via.placeholder.com/800x400",
+            "https://via.placeholder.com/800x400"
+        ],
         "duration": "5",
         "peopleCount": "4",
         "price": "890.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "_id": "de25adee-3962-45dd-a13e-cbf1b1b478fc"
     },
     "88c2ee36-7bae-47ed-999b-4ee6ab6a3617": {
         "country": "Brazil",
         "city": "Rio De Janeiro",
-        "imageUrl": "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
+        "imageUrl": [
+            "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
+            "https://i.natgeofe.com/k/33e48abd-f2e7-4430-b7bf-cc9a18c14cc6/brazil-christ-the-redeemer_4x3.jpg",
+            "https://keystoneacademic-res.cloudinary.com/image/upload/v1696429984/articles/educationscom/article-open-graph-image-19896.jpg"
+        ],
         "duration": "5",
         "peopleCount": "4",
         "price": "890.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "_id": "88c2ee36-7bae-47ed-999b-4ee6ab6a3617"
     },
     "a59eec8b-9226-48f2-b43a-987312cf2173": {
         "country": "Brazil",
         "city": "Rio De Janeiro",
-        "imageUrl": "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
+        "imageUrl": [
+            "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
+            "https://via.placeholder.com/800x400",
+            "https://via.placeholder.com/800x400"
+        ],
         "duration": "5",
         "peopleCount": "4",
         "price": "890.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "_id": "a59eec8b-9226-48f2-b43a-987312cf2173"
     },
     "c6bc68b6-5e95-47a2-b125-9f35c8c5029b": {
         "country": "Algeria",
-        "city": "Algeria",
-        "imageUrl": "https://cdn.mappr.co/wp-content/uploads/2023/05/The-Capital-of-Algeria-Algiers.jpg",
+        "city": "Algiers",
+        "imageUrl": [
+            "https://cdn.mappr.co/wp-content/uploads/2023/05/The-Capital-of-Algeria-Algiers.jpg",
+            "https://via.placeholder.com/800x400",
+            "https://via.placeholder.com/800x400"
+        ],
         "duration": "7",
         "peopleCount": "4",
         "price": "200.00",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat.",
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "title": "Arrival and check-in at the hotel",
+                "description": "Explore local markets and enjoy a welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "title": "Guided tour of historical sites",
+                "description": "Visit famous landmarks and enjoy local cuisine."
+            },
+            {
+                "day": "Day 3",
+                "title": "Free day and departure",
+                "description": "Enjoy leisure activities or optional tours before departure."
+            }
+        ],
         "_id": "c6bc68b6-5e95-47a2-b125-9f35c8c5029b"
     }
 }

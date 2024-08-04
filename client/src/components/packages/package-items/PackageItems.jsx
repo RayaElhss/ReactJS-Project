@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PackageItem({
     _id,
@@ -13,13 +14,15 @@ export default function PackageItem({
     const [imgError, setImgError] = useState(false);
     const fallbackImageUrl = '/path/to/default-image.jpg'; // Replace with the actual path to your fallback image
 
+    const firstImageUrl = Array.isArray(imageUrl) && imageUrl.length > 0 ? imageUrl[0] : fallbackImageUrl;
+
     return (
         <div className="packages-item">
             <div className="packages-img">
                 <img
                     alt="Package"
                     className="img-fluid w-100 rounded-top"
-                    src={imgError ? fallbackImageUrl : imageUrl}
+                    src={imgError ? fallbackImageUrl : firstImageUrl}
                     onError={() => setImgError(true)}
                 />
                 <div
@@ -69,12 +72,9 @@ export default function PackageItem({
                 </div>
                 <div className="row bg-primary rounded-bottom mx-0">
                     <div className="col-6 text-start px-0">
-                        <a
-                            className="btn-hover btn text-white py-2 px-4"
-                            href={`/details/${_id}`}
-                        >
+                        <Link to={`/packages/${_id}`} className="btn-hover btn text-white py-2 px-4">
                             Read More
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-6 text-end px-0">
                         <a

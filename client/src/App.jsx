@@ -48,6 +48,8 @@ function App() {
       <TopBar />
       <Navbar />
 
+      <PackageDetails />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -65,6 +67,7 @@ function App() {
         <Route path="/details" element={<PackageDetails />} />
         <Route path="/tourCategories/:category" element={<ToursPage />} />
         <Route path="/tours/:id" element={<TourDetails />} />
+        <Route path="/packages/:id" element={<PackageDetails />} />
         <Route path="/allPackages" element={<Packages />} /> {/* Page showing all packages */}
       </Routes>
 
