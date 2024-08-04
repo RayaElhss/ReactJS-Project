@@ -1,10 +1,11 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import styles from './GptTest.module.css';
+import styles from './TourDetails.module.css';
 import Modal from '../modal/Modal';
 
-const GptTest = () => {
+const TourDetails = () => {
+
     const tour = {
         title: "Romantic Paris Experience",
         category: "City Tour",
@@ -50,22 +51,10 @@ const GptTest = () => {
             "Personal expenses",
             "Meals not mentioned in the itinerary"
         ],
-        reviews: [
-            { rating: 5, comment: "An unforgettable experience! Paris was everything I hoped for and more." },
-            { rating: 4, comment: "Great tour! The guide was knowledgeable and the itinerary was well-planned." }
-        ],
-        faq: [
-            { question: "What is the cancellation policy?", answer: "Free cancellation up to 24 hours before the tour starts." },
-            { question: "Is the tour suitable for children?", answer: "Yes, this tour is family-friendly." }
-        ],
         tips: [
             "Bring comfortable walking shoes for city tours.",
             "Learn a few basic French phrases for easier communication."
-        ],
-        contactInfo: {
-            email: "support@tours.com",
-            phone: "+33 1 2345 6789"
-        }
+        ]
     };
 
     return (
@@ -128,10 +117,9 @@ const GptTest = () => {
             </ul>
 
             <h3 className="box-title mt-5">Contact Information</h3>
-            <p>Email: {tour.contactInfo.email}</p>
-            <p>Phone: {tour.contactInfo.phone}</p>
+            
         </div>
     );
 };
 
-export default GptTest;
+export default TourDetails;

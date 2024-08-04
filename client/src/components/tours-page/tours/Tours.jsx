@@ -1,6 +1,17 @@
+import { Link, useParams } from 'react-router-dom';
 import styles from '../ToursPage.module.css';
+import { useEffect, useState } from 'react';
 
 export default function Tours({ tours }) {
+
+    const {id} = useParams();
+    const [tour, setTour] = useState(null);
+
+    useEffect(()=> {
+        const selectedTour = tours.find((tour) => tour._id === id);
+        setTour(selectedTour);
+    }, [id, tours]);
+
     return (
         <section className={styles.toursList}>
             {tours.length > 0 ? (
@@ -19,13 +30,15 @@ export default function Tours({ tours }) {
                             {tour.offer && (
                                 <div className={`${styles.offer} ${styles.offerInfo}`}>{tour.offer}</div>
                             )}
-                            <button className={styles.btn}>View Details</button>
+                            <Link to={`/tours/${tour._id}`}>
+                                <button className={styles.btn}>View Details</button>
+                            </Link>
                         </div>
                     </div>
                 ))
             ) : (
-                <p style={{ fontSize: '20px', fontFamily: 'Arial, sans-serif' }}>
-                    No tours available for this category.
+                <p style={{ fontSize: '40px', fontFamily: 'Bowlby One SC' }}>
+                    No tours available for this category! :(
                 </p>)}
         </section>
     );

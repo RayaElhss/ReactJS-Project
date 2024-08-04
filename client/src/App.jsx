@@ -24,7 +24,7 @@ import ToursPage from './components/tours-page/ToursPage.jsx';
 import Home from './components/home-item/Home.jsx';
 import { AuthContext } from './contexts/AuthContext.js';
 import Testimonials from './components/testimonials/Testimonials.jsx';
-import GptTest from './components/gptTest/GptTest.jsx';
+import TourDetails from './components/tour-details/TourDetails.jsx';
 import Modal from './components/modal/Modal.jsx';
 import Navbar from "./components/navbar/Navbar";
 
@@ -69,6 +69,7 @@ function App() {
           <Route path="/test" element={<Test />} />
           <Route path="/details" element={<PackageDetails />} />
           <Route path="/tourCategories/:category" element={<ToursPage />} />
+          <Route path="/tours/:id" element={<TourDetails />} />
         </Routes>
       </div>
 
