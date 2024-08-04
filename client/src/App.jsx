@@ -48,8 +48,6 @@ function App() {
       <TopBar />
       <Navbar />
 
-      <PackageDetails />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
