@@ -9,3 +9,9 @@ export const getAllPackages = async () => {
 
     return packages;
 }
+
+export const getPackageById = async (id) => {
+    const result = await request.get(`${baseUrl}/${id}`);
+
+    return result;
+};
