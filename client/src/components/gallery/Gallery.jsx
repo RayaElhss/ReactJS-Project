@@ -14,7 +14,7 @@ function ImageModal({ show, onClose, imageUrl, title }) {
                 <div className="modal-dialog modal-lg" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title">{title}</h5>
+                        <h5 className={`modal-title ${styles.modalTitle}`}>{title}</h5>
                             <button type="button" className="close ms-auto" onClick={onClose}>
                                 <span aria-hidden="true">&times;</span>
                             </button>

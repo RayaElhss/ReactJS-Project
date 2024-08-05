@@ -28,3 +28,10 @@
     cursor: pointer;
     margin-left: auto; /* Align close button to the right */
 }
+
+.modalTitle {
+    font-family: 'Helvetica', sans-serif; /* Example font family */
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    /* You can also import fonts from Google Fonts or any other source */
+}
