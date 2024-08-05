@@ -13,7 +13,7 @@ import Packages from './components/packages/Packages.jsx';
 import Gallery from './components/gallery/Gallery';
 import ShareAdventures from './components/shareAdventures/ShareAdventures';
 import TravelGuide from './components/travelGuide/TravelGuide';
-import OurBlog from './components/ourBlog/OurBlog';
+import Blog from './components/blog/Blog';
 import Footer from './components/footer/Footer';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
@@ -26,6 +26,7 @@ import { AuthContext } from './contexts/AuthContext.js';
 import Testimonials from './components/testimonials/Testimonials.jsx';
 import TourDetails from './components/tour-details/TourDetails.jsx';
 import Navbar from "./components/navbar/Navbar";
+import CreateBlog from './components/blog-form/create-blog/CreateBlog.jsx';
 
 function App() {
   const [authState, setAuthState] = useState({});
@@ -56,7 +57,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/share-adventures" element={<ShareAdventures />} />
         <Route path="/travel-guide" element={<TravelGuide />} />
-        <Route path="/our-blog" element={<OurBlog />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
@@ -68,6 +69,7 @@ function App() {
         <Route path="/packages/:id" element={<PackageDetails />} />
         <Route path="/allPackages" element={<Packages />} /> {/* Page showing all packages */}
         <Route path="/allGallery" element={<Gallery />} /> {/* Page showing all gallery */}
+        <Route path="/createBlog" element={<CreateBlog />} /> {/* Page showing all gallery */}
       </Routes>
 
       <Footer />

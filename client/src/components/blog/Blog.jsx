@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function OurBlog() {
     return (
         <div className="container-fluid blog py-5">
@@ -11,7 +13,7 @@ export default function OurBlog() {
                     <h5 className="section-title px-3">
                         Our Blog
                     </h5>
-                    <h1 className="mb-4">
+                    <h1 className="mb-4" style={{ color: 'black' }}>
                         Popular Travel Blogs
                     </h1>
                     <p className="mb-0">
@@ -75,7 +77,7 @@ export default function OurBlog() {
                                     className="btn btn-primary rounded-pill py-2 px-4"
                                     href="#"
                                 >
-                                    Read More
+                                    View post
                                 </a>
                             </div>
                         </div>
@@ -136,7 +138,7 @@ export default function OurBlog() {
                                     className="btn btn-primary rounded-pill py-2 px-4"
                                     href="#"
                                 >
-                                    Read More
+                                    View post
                                 </a>
                             </div>
                         </div>
@@ -197,16 +199,19 @@ export default function OurBlog() {
                                     className="btn btn-primary rounded-pill py-2 px-4"
                                     href="#"
                                 >
-                                    Read More
+                                    View post
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="d-flex justify-content-center mt-4">
-                    <button type="button" className="btn btn-primary" style={{ backgroundColor: 'grey', color: 'white' }}>
-                        View All Packages
+                <div className="d-flex justify-content-center mt-4 button-container">
+                    <button type="button" className="btn btn-primary mx-2">
+                        View All Blogs
                     </button>
+                    <Link to="/createBlog" className="btn btn-primary mx-2">
+                        Create Blog
+                    </Link>
                 </div>
 
             </div>
