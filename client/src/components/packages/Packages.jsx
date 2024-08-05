@@ -36,19 +36,20 @@ export default function Packages() {
             <h3>No any upcoming packages yet!</h3>
           )}
         </div>
+        {isHomePage && (
+          <div className="d-flex justify-content-center mt-4">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleViewAllClick} // Navigate to view all packages
+            >
+              View All Packages
+            </button>
+          </div>
+        )}
       </div>
 
-      {isHomePage && (
-        <div className="d-flex justify-content-center mt-4">
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={handleViewAllClick} // Navigate to view all packages
-          >
-            View All Packages
-          </button>
-        </div>
-      )}
+
     </div>
   );
 }
