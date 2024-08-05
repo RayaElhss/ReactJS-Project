@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './style.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -31,14 +31,34 @@ import CreateBlog from './components/blog-form/create-blog/CreateBlog.jsx';
 function App() {
   const [authState, setAuthState] = useState({});
 
+  useEffect(() => {
+    const storedAccessToken = localStorage.getItem('accessToken');
+    const storedUserId = localStorage.getItem('userId');
+    const storedEmail = localStorage.getItem('email');
+
+    if (storedAccessToken && storedUserId && storedEmail) {
+      setAuthState({
+        accessToken: storedAccessToken,
+        userId: storedUserId,
+        email: storedEmail
+      });
+    }
+  }, []);
+
+
+
+
   const changeAuthState = (state) => {
+    localStorage.setItem('accessToken', state.accessToken)
+    localStorage.setItem('userId', state.userId)
+    localStorage.setItem('email', state.email)
     setAuthState(state);
   };
 
   const contextData = {
     userId: authState._id,
     email: authState.email,
-    acessToken: authState.acessToken,
+    accessToken: authState.accessToken,
     isAuthenticated: !!authState.email,
     changeAuthState
   }

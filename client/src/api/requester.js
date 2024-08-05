@@ -1,12 +1,18 @@
 export default async function requester(method, url, data) {
-    const options = {};
+    const options = {
+        method,
+        headers: {}
+    };
 
-    if (method !== 'GET') {
-        options.method = method;
+    const token = localStorage.getItem('accessToken');
+    if (token) {
+        options.headers['X-Authorization'] = token;
     }
+
 
     if (data) {
         options.headers = {
+            ...options.headers,
             'Content-Type': 'application/json'
         }
 
@@ -16,7 +22,7 @@ export default async function requester(method, url, data) {
     const response = await fetch(url, options);
     const result = await response.json();
 
-    if(!response.ok){
+    if (!response.ok) {
         throw result;
     }
 

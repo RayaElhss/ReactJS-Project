@@ -8,6 +8,13 @@ export const useLogin = () => {
 
     const loginHandler = async (email, password) => {
         const {password: _, ...authData} = await login(email, password);
+
+
+        // Store the token in localStorage
+        localStorage.setItem('accessToken', authData.accessToken);
+        localStorage.setItem('userId', authData.userId);
+        localStorage.setItem('email', authData.email);
+
         // updated application state
         changeAuthState(authData)
 
@@ -23,6 +30,10 @@ export const useRegister = () => {
     const registerHandler = async (email, password) => {
         const {password: _, ...authData} = await register(email, password);
 
+        localStorage.setItem('accessToken', authData.accessToken);
+        localStorage.setItem('userId', authData.userId);
+        localStorage.setItem('email', authData.email);
+        
         changeAuthState(authData)
 
         return authData;
