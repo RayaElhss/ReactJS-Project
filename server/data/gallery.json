@@ -1,0 +1,42 @@
+{
+    "34747aa2-eaef-467f-9a0a-525a75c716f5": {
+        "title": "Jordan",
+        "imageUrl": "https://cdn.britannica.com/22/153522-050-2FF48BAC/Al-Dayr-Petra-Jordan.jpg",
+        "_id": "34747aa2-eaef-467f-9a0a-525a75c716f5"
+    },
+    "4c49b1f3-2d37-494f-805b-0db01229bcf4": {
+        "title": "Algeria",
+        "imageUrl": "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_759302728v2.jpg",
+        "_id": "4c49b1f3-2d37-494f-805b-0db01229bcf4"
+    },
+    "eb80e549-388b-4ed0-85b9-dc8d87d57ec8": {
+        "title": "Italy",
+        "imageUrl": "https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg",
+        "_id": "eb80e549-388b-4ed0-85b9-dc8d87d57ec8"
+    },
+    "6d5a896b-9b52-4b73-860d-c0a5854b7185": {
+        "title": "Japan",
+        "imageUrl": "https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg",
+        "_id": "6d5a896b-9b52-4b73-860d-c0a5854b7185"
+    },
+    "77939f55-ff91-4321-b896-21a917e4054a": {
+        "title": "Australia",
+        "imageUrl": "https://www.telegraph.co.uk/content/dam/travel/Spark/singapore-airlines/sydney-harbour-aerial-view.jpg?imwidth=680",
+        "_id": "77939f55-ff91-4321-b896-21a917e4054a"
+    },
+    "7161662e-75ea-447b-a0a6-6435bd3e6712": {
+        "title": "Morocco",
+        "imageUrl": "https://lp-cms-production.imgix.net/2023-10/GettyRF653452628.jpg",
+        "_id": "7161662e-75ea-447b-a0a6-6435bd3e6712"
+    },
+    "dcf1515d-7171-4a32-9a3f-771091a49c5d": {
+        "title": "France",
+        "imageUrl": "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_667548661v2.jpg",
+        "_id": "dcf1515d-7171-4a32-9a3f-771091a49c5d"
+    },
+    "84964632-15da-4013-8167-271954e5dc93": {
+        "title": "Greece",
+        "imageUrl": "https://images.ctfassets.net/wv75stsetqy3/18jOEJrhKM7WA81nkCKZV8/6f70df258ed1233d5c3a8e3f01298b06/Greece.jpg?q=60&fit=fill&fm=webp",
+        "_id": "84964632-15da-4013-8167-271954e5dc93"
+    }
+}

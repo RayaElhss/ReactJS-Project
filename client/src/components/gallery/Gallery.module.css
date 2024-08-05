@@ -1,0 +1,30 @@
+/* Gallery.module.css */
+
+/* Styles for the overlay effect */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1040; /* Ensure it's behind the modal */
+}
+
+/* Modal styling */
+.modal {
+    z-index: 1050; /* Ensure modal is above the overlay */
+}
+
+.modalDialog {
+    margin-top: 10%;
+}
+
+.close {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    margin-left: auto; /* Align close button to the right */
+}
