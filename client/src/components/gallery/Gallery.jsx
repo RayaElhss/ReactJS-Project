@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllGallery } from '../../api/gallery-api';
 import styles from './Gallery.module.css';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Modal Component
 function ImageModal({ show, onClose, imageUrl, title }) {
@@ -14,7 +15,7 @@ function ImageModal({ show, onClose, imageUrl, title }) {
                 <div className="modal-dialog modal-lg" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                        <h5 className={`modal-title ${styles.modalTitle}`}>{title}</h5>
+                            <h5 className={`modal-title ${styles.modalTitle}`}>{title}</h5>
                             <button type="button" className="close ms-auto" onClick={onClose}>
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -39,6 +40,10 @@ export default function Gallery() {
     const [error, setError] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
     const [showModal, setShowModal] = useState(false);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
 
 
     useEffect(() => {
@@ -65,6 +70,12 @@ export default function Gallery() {
     }
 
 
+    // Determine if we're on the homepage
+    const isHomePage = location.pathname === '/';
+
+    const handleViewAllClick = () => {
+        navigate('/allGallery'); // Navigate to the "All Packages" page
+    };
 
     return (
         <div className="container-fluid gallery py-5 my-5">
@@ -87,7 +98,7 @@ export default function Gallery() {
                 <div className="tab-content">
                     <div className="tab-pane fade show p-0 active" id="GalleryTab-1">
                         <div className="row g-2">
-                            {galleryData.map((item) => (
+                            {(isHomePage ? galleryData.slice(0, 12) : galleryData).map((item) => (
                                 <div key={item._id} className="col-sm-6 col-md-6 col-lg-4 col-xl-2">
                                     <div className="gallery-item h-100">
                                         <img
@@ -115,6 +126,17 @@ export default function Gallery() {
                         </div>
                     </div>
                 </div>
+                {isHomePage && (
+                    <div className="d-flex justify-content-end mt-4">
+                        <button
+                            type="button"
+                            className="btn btn-primary"
+                            onClick={handleViewAllClick} // Navigate to view all packages
+                        >
+                            View All Packages
+                        </button>
+                    </div>
+                )}
             </div>
             <ImageModal
                 show={showModal}

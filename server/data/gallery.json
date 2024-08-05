@@ -38,5 +38,30 @@
         "title": "Greece",
         "imageUrl": "https://images.ctfassets.net/wv75stsetqy3/18jOEJrhKM7WA81nkCKZV8/6f70df258ed1233d5c3a8e3f01298b06/Greece.jpg?q=60&fit=fill&fm=webp",
         "_id": "84964632-15da-4013-8167-271954e5dc93"
+    },
+    "15f34514-dab4-4b44-86c6-8169751147aa": {
+        "title": "Portugal",
+        "imageUrl": "https://www.travelandleisure.com/thmb/t7LUbPYWRDe_itXi0c9mmS4OYMc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-azenhas-do-mar-portugal-PRTGREECE0922-1b53ba0a4b4c4eef999ae4190f7981cd.jpg",
+        "_id": "15f34514-dab4-4b44-86c6-8169751147aa"
+    },
+    "521ae00d-8ea9-448a-84d4-0c5d23caf37f": {
+        "title": "Albania",
+        "imageUrl": "https://webunwto.s3.eu-west-1.amazonaws.com/s3fs-public/2024-04/investing-in-albania.png",
+        "_id": "521ae00d-8ea9-448a-84d4-0c5d23caf37f"
+    },
+    "90cd9e1a-f267-4835-bccb-f59da9482f40": {
+        "title": "Maldives",
+        "imageUrl": "https://www.haystravel.co.uk/mediaLocal/r2idqbve/maldives-hero-desktop-1901686090.webp",
+        "_id": "90cd9e1a-f267-4835-bccb-f59da9482f40"
+    },
+    "fe59ec0b-2285-481e-91f0-99e0b515cc9c": {
+        "title": "Argentina",
+        "imageUrl": "https://www.travelandleisure.com/thmb/Z7cTKvNslVBtWlQADuFViL9L-no=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-buenos-aires-summer-WHENARGENTINA0823-f2db93e7592b455ab7cc0543d6c4cf8d.jpg",
+        "_id": "fe59ec0b-2285-481e-91f0-99e0b515cc9c"
+    },
+    "67b7e600-650a-4481-97ed-fc28ba10282b": {
+        "title": "Norway",
+        "imageUrl": "https://cdn.britannica.com/64/94864-050-223C3FE6/Northern-lights-sky-Kautokeino.jpg",
+        "_id": "67b7e600-650a-4481-97ed-fc28ba10282b"
     }
 }

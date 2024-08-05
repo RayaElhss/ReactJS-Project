@@ -67,6 +67,7 @@ function App() {
         <Route path="/tours/:id" element={<TourDetails />} />
         <Route path="/packages/:id" element={<PackageDetails />} />
         <Route path="/allPackages" element={<Packages />} /> {/* Page showing all packages */}
+        <Route path="/allGallery" element={<Gallery />} /> {/* Page showing all gallery */}
       </Routes>
 
       <Footer />
