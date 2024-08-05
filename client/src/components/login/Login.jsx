@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useLogin } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
+import { useState } from "react";
 
 const initialValues = { email: '', password: '' };
 export default function Login() {
+    const [error, setError] = useState('');
     const login = useLogin();
     const navigate = useNavigate();
 
@@ -12,6 +14,7 @@ export default function Login() {
             await login(email, password)
             navigate('/');
         } catch (err) {
+            setError(err.message);
             console.log(err.message);
         }
     }
@@ -43,6 +46,13 @@ export default function Login() {
                             >
                                 <div className="card-body p-5">
                                     <h2 className="text-uppercase text-center mb-5"> Login here</h2>
+
+                                    {error && (
+                                        <div className="alert alert-danger text-center" role="alert">
+                                            {error}
+                                        </div>
+                                    )}
+
                                     <form onSubmit={submitHandler}>
                                         <label
                                             className="form-label"
