@@ -62,6 +62,15 @@ export default function ToursPage({ description }) {
 
     return (
         <div>
+            {/* Back Button
+            <div>
+                <button
+                    className={styles.backButton} // Add custom styling for the button
+                    onClick={() => navigate('/packages')} // Navigate back to the previous page
+                >
+                    ← Back to All Tours
+                </button>
+            </div> */}
             <header className={styles.categoryHeader}>
                 <div className={styles.banner}>
                     <img src={tourDetails.imageUrl} alt={`${category} Tours className=${styles.bannerImg}`} />

@@ -1,16 +1,19 @@
 import { Link, useParams } from 'react-router-dom';
 import styles from '../ToursPage.module.css';
 import { useEffect, useState } from 'react';
+import { getAllTours } from '../../../api/tours-api';
 
-export default function Tours({ tours }) {
+export default function Tours({ tours: initialTours }) {
 
-    const {id} = useParams();
-    const [tour, setTour] = useState(null);
+    const [tours, setTours] = useState(initialTours || []);
 
-    useEffect(()=> {
-        const selectedTour = tours.find((tour) => tour._id === id);
-        setTour(selectedTour);
-    }, [id, tours]);
+    useEffect(() => {
+        if (initialTours.length === 0) {
+            getAllTours()
+                .then(setTours)
+                .catch((error) => console.log('failed to fetch tourss', error));
+        }
+    }, [initialTours])
 
     return (
         <section className={styles.toursList}>

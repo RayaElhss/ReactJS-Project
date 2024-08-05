@@ -238,3 +238,21 @@
     text-align: center;
 }
 
+.backButton {
+    position: absolute; /* Use absolute positioning to move it freely */
+    top: 70px; /* Adjust the top position to move the button down */
+    left: 20px; /* Keep it aligned to the left */
+    background-color: #F1F1F1;
+    color: #333;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 1000; /* Ensure the button is on top of other elements */
+  }
+  
+  .backButton:hover {
+    color: #55107c; /* Change color on hover */
+  }

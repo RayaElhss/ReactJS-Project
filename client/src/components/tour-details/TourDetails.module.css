@@ -8,6 +8,9 @@
     margin: 20px auto;
   }
   
+  .boxTitle {
+    margin-bottom: 0rem;
+  }
   .title {
     font-size: 2em;
     margin-bottom: 10px;
@@ -61,4 +64,5 @@
     border-radius: 25px;
     margin-bottom: 20px;
   }
+  
   
