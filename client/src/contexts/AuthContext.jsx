@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext} from "react";
 import usePersistedState from "../hooks/usePersistedState";
 
 export const AuthContext = createContext({
@@ -7,30 +7,39 @@ export const AuthContext = createContext({
     username: '',
     accessToken: '',
     isAuthenticated: false,
-    changeAuthState: (authState = {}) => null
+    changeAuthState: (authState = {}) => null,
+    logout: () => null
 });
 
 
 export function AuthContextProvider(props) {
-    const [authState, setAuthState] = usePersistedState('auth', {
-        userId: '',
-        email: '',
-        username: '',
-        accessToken: ''
-    });
+    const [authState, setAuthState] = usePersistedState('auth', {});
 
     const changeAuthState = (state) => {
-        setAuthState(state)
+        localStorage.setItem('accessToken', state.accessToken);
+        setAuthState(state);
+    }
+
+    const logout = () => {
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('auth');
+        setAuthState({
+            userId: '',
+            email: '',
+            username: '',
+            accessToken: ''
+        });
     }
 
     const contextData = {
-        userId: authState.userId,
+        userId: authState._id,
         email: authState.email,
-        username: authState.username,
         accessToken: authState.accessToken,
-        isAuthenticated: !!authState.accessToken,
-        changeAuthState
+        isAuthenticated: !!authState?.email,
+        changeAuthState,
+        logout
     }
+
     return (
         <AuthContext.Provider value={contextData}>
             {props.children}

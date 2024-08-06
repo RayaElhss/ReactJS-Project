@@ -1,5 +1,6 @@
 import { login, logout, register } from "../api/auth-api"
 import { useAuthContext } from "../contexts/AuthContext";
+import { logout as apiLogout } from "../api/auth-api";
 
 export const useLogin = () => {
     const { changeAuthState } = useAuthContext();
@@ -17,12 +18,10 @@ export const useLogin = () => {
 
             // Store the token in localStorage
             localStorage.setItem('accessToken', accessToken);
-            localStorage.setItem('userId', userId);
-            localStorage.setItem('email', userEmail);
-            localStorage.setItem('username', username);
 
             // updated application state
             changeAuthState({ userId, email: userEmail, accessToken, username })
+            localStorage.setItem('auth', JSON.stringify({ userId, email: userEmail, username, accessToken }));
 
             return authData;
         } catch (error) {
@@ -36,7 +35,7 @@ export const useLogin = () => {
 };
 
 export const useRegister = () => {
-    const { changeAuthState } = useContext(AuthContext);
+    const { changeAuthState } = useAuthContext();
 
     const registerHandler = async (username, email, password) => {
         try {
@@ -50,11 +49,9 @@ export const useRegister = () => {
             }
 
             localStorage.setItem('accessToken', accessToken);
-            localStorage.setItem('userId', userId);
-            localStorage.setItem('email', userEmail);
-            localStorage.setItem("username", username);
 
-            changeAuthState({ userId, email: userEmail, accessToken, username })
+            changeAuthState({ userId, email: userEmail, accessToken, username });
+            localStorage.setItem('auth', JSON.stringify({ userId, email: userEmail, username, accessToken }));
 
             return authData;
         } catch (error) {
@@ -69,31 +66,17 @@ export const useRegister = () => {
 }
 
 export const useLogout = () => {
-    const { changeAuthState } = useContext(AuthContext);
+    const { logout: localLogout } = useAuthContext();
 
     const logoutHandler = async () => {
-        const token = localStorage.getItem('accessToken');
-        console.log("Logging out with token:", token);
-
         try {
-            if (token) {
-                await logout(token);
-                console.log("Logout successful");
-            } else {
-                console.error("No access token found.");
-            }
-
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('userId');
-            localStorage.removeItem('email');
-            localStorage.removeItem('username');
-
-
-            changeAuthState({});
+            await apiLogout();
+            localLogout();
         } catch (error) {
             console.error("Failed to logout:", error);
         }
 
     }
+
     return logoutHandler;
 };
