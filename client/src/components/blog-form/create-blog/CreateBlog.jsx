@@ -16,7 +16,7 @@ export default function CreateBlog() {
         console.log('Form Data:', values);
         try {
             const { _id: blogId } = await createBlog(values);
-            navigate(`/blogs/${blogId}/details`);
+            navigate(`/blogs`);
         } catch (error) {
             // TODO set error state
             console.log(error.message);
@@ -29,6 +29,7 @@ export default function CreateBlog() {
         changeHandler,
         submitHandler
     } = useForm(initialValues, createHandler);
+    
     return (
         <section className={styles.auth}>
             <form id={styles.createPage} onSubmit={submitHandler}>
@@ -40,11 +41,11 @@ export default function CreateBlog() {
                     <label htmlFor="imageUrl">Image:</label>
                     <input type="text" id="imageUrl" name="imageUrl" value={values.imageUrl} onChange={changeHandler} placeholder="Upload a photo..." className={styles.inputText} />
 
-                    <label htmlFor="summary">Description:</label>
-                    <textarea name="summary" value={values.summary} onChange={changeHandler} id="summary" placeholder="Enter blog description..." className={styles.textarea}></textarea>
+                    <label htmlFor="description">Description:</label>
+                    <textarea name="description" value={values.description} onChange={changeHandler} id="description" placeholder="Enter blog description..." className={styles.textarea}></textarea>
 
                     <input className={styles.submitButton} type="submit" value="Create Blog" />
-                </div>
+                </div>s
             </form>
         </section>
     );
