@@ -1,10 +1,8 @@
-import { useContext } from "react";
-
 import { login, logout, register } from "../api/auth-api"
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 export const useLogin = () => {
-    const { changeAuthState } = useContext(AuthContext);
+    const { changeAuthState } = useAuthContext();
 
     const loginHandler = async (email, password) => {
         try {
@@ -88,7 +86,7 @@ export const useLogout = () => {
             localStorage.removeItem('accessToken');
             localStorage.removeItem('userId');
             localStorage.removeItem('email');
-            localStorage.removeItem('username', username);
+            localStorage.removeItem('username');
 
 
             changeAuthState({});

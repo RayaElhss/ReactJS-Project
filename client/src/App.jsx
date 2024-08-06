@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './style.css';
 
-import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -22,53 +21,17 @@ import Test from './components/test/Test';
 import PackageDetails from './components/package-details/PackageDetails.jsx';
 import ToursPage from './components/tours-page/ToursPage.jsx';
 import Home from './components/home-item/Home.jsx';
-import { AuthContext } from './contexts/AuthContext.js';
 import Testimonials from './components/testimonials/Testimonials.jsx';
 import TourDetails from './components/tour-details/TourDetails.jsx';
 import Navbar from "./components/navbar/Navbar";
 import CreateBlog from './components/blog-form/create-blog/CreateBlog.jsx';
 import Logout from './components/logout/Logout.jsx';
+import { AuthContextProvider } from './contexts/AuthContext.jsx';
 
 function App() {
-  const [authState, setAuthState] = useState({});
-
-  useEffect(() => {
-    const storedAccessToken = localStorage.getItem('accessToken');
-    const storedUserId = localStorage.getItem('userId');
-    const storedEmail = localStorage.getItem('email');
-    const storedUsername = localStorage.getItem('username');
-
-    if (storedAccessToken && storedUserId && storedEmail) {
-      setAuthState({
-        accessToken: storedAccessToken,
-        userId: storedUserId,
-        email: storedEmail,
-        username: storedUsername,
-      });
-    }
-  }, []);
-
-
-  const changeAuthState = (state) => {
-    localStorage.setItem('accessToken', state.accessToken)
-    localStorage.setItem('userId', state.userId)
-    localStorage.setItem('email', state.email)
-    localStorage.setItem('username', state.username);
-    setAuthState(state);
-  };
-
-  const contextData = {
-    userId: authState.userId,
-    email: authState.email,
-    username: authState.username,
-    accessToken: authState.accessToken,
-    isAuthenticated: !!authState.email,
-    changeAuthState
-  }
-
 
   return (
-    <AuthContext.Provider value={contextData}>
+    <AuthContextProvider>
       <TopBar />
       <Navbar />
 
@@ -97,7 +60,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </AuthContext.Provider>
+    </AuthContextProvider>
   );
 }
 
