@@ -27,6 +27,7 @@ import Testimonials from './components/testimonials/Testimonials.jsx';
 import TourDetails from './components/tour-details/TourDetails.jsx';
 import Navbar from "./components/navbar/Navbar";
 import CreateBlog from './components/blog-form/create-blog/CreateBlog.jsx';
+import Logout from './components/logout/Logout.jsx';
 
 function App() {
   const [authState, setAuthState] = useState({});
@@ -35,29 +36,31 @@ function App() {
     const storedAccessToken = localStorage.getItem('accessToken');
     const storedUserId = localStorage.getItem('userId');
     const storedEmail = localStorage.getItem('email');
+    const storedUsername = localStorage.getItem('username');
 
     if (storedAccessToken && storedUserId && storedEmail) {
       setAuthState({
         accessToken: storedAccessToken,
         userId: storedUserId,
-        email: storedEmail
+        email: storedEmail,
+        username: storedUsername,
       });
     }
   }, []);
-
-
 
 
   const changeAuthState = (state) => {
     localStorage.setItem('accessToken', state.accessToken)
     localStorage.setItem('userId', state.userId)
     localStorage.setItem('email', state.email)
+    localStorage.setItem('username', state.username);
     setAuthState(state);
   };
 
   const contextData = {
-    userId: authState._id,
+    userId: authState.userId,
     email: authState.email,
+    username: authState.username,
     accessToken: authState.accessToken,
     isAuthenticated: !!authState.email,
     changeAuthState
@@ -81,6 +84,7 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/test" element={<Test />} />
         <Route path="/details" element={<PackageDetails />} />
