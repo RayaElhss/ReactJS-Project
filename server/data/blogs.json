@@ -1,0 +1,44 @@
+[
+    {
+        "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+        "title": "A Journey through the Alps",
+        "imageUrl": "https://ttgasia.2017.ttgasia.com/wp-content/uploads/sites/2/2019/03/paragliding.jpg",
+        "description": "Exploring the stunning landscapes of the Alpine region.",
+        "author": "John Doe",
+        "date": "2023-08-01T10:00:00Z",
+        "likes": 150,
+        "comments": [
+            {
+                "author": "Jane Smith",
+                "content": "Great post! I love the Alps."
+            },
+            {
+                "author": "Mike Brown",
+                "content": "Very informative and well-written!"
+            }
+        ],
+        "_createdOn": 1722981299716,
+        "_id": "7e2030c9-ba93-4bca-bbf0-9acbb9f1fd66"
+    },
+    {
+        "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+        "title": "Discovering the Sahara Desert",
+        "imageUrl": "https://media.licdn.com/dms/image/C4E12AQFXB4RA2fmDcg/article-cover_image-shrink_720_1280/0/1520079367611?e=2147483647&v=beta&t=7oMWLFs8lRI_dvfXIjmwTspyIdlcOo5HJL7duV5wUMY",
+        "description": "An adventurous journey into the heart of the Sahara Desert.",
+        "author": "Sarah Williams",
+        "date": "2023-07-15T09:30:00Z",
+        "likes": 200,
+        "comments": [
+            {
+                "author": "Tom Hanks",
+                "content": "The Sahara is so mesmerizing!"
+            },
+            {
+                "author": "Emily Clarke",
+                "content": "Can't wait to visit after reading this!"
+            }
+        ],
+        "_createdOn": 1722981456719,
+        "_id": "cdfad67d-aaf3-4858-b149-fc58877ab493"
+    }
+]
