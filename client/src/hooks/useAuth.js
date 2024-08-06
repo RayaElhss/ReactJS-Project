@@ -7,21 +7,8 @@ export const useLogin = () => {
 
     const loginHandler = async (email, password) => {
         try {
-            const authData = await login(email, password);
-            console.log("Authentication Data:", authData);
-
-            const { _id: userId, email: userEmail, accessToken, username } = authData;
-
-            if (!userId) {
-                throw new Error("User ID not found in authentication data.");
-            }
-
-            // Store the token in localStorage
-            localStorage.setItem('accessToken', accessToken);
-
-            // updated application state
-            changeAuthState({ userId, email: userEmail, accessToken, username })
-            localStorage.setItem('auth', JSON.stringify({ userId, email: userEmail, username, accessToken }));
+            const { password: _, ...authData } = await login(email, password);
+            changeAuthState(authData);
 
             return authData;
         } catch (error) {
@@ -39,27 +26,14 @@ export const useRegister = () => {
 
     const registerHandler = async (username, email, password) => {
         try {
-            const authData = await register(username, email, password);
-            console.log("Registration Data:", authData);
-
-            const { _id: userId, email: userEmail, accessToken } = authData;
-
-            if (!userId) {
-                throw new Error("User ID not found in registration data.");
-            }
-
-            localStorage.setItem('accessToken', accessToken);
-
-            changeAuthState({ userId, email: userEmail, accessToken, username });
-            localStorage.setItem('auth', JSON.stringify({ userId, email: userEmail, username, accessToken }));
+            const { password: _, ...authData } = await register(username, email, password);
+            changeAuthState(authData);
 
             return authData;
         } catch (error) {
             console.error("Registration failed:", error);
             throw error;
         }
-
-
     };
 
     return registerHandler;
