@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import usePersistedState from "../hooks/usePersistedState";
 
 export const AuthContext = createContext({
     userId: '',
@@ -11,36 +12,16 @@ export const AuthContext = createContext({
 
 
 export function AuthContextProvider(props) {
-    const [authState, setAuthState] = useState({
+    const [authState, setAuthState] = usePersistedState('auth', {
         userId: '',
         email: '',
         username: '',
         accessToken: ''
     });
-    useEffect(() => {
-        const storedAccessToken = localStorage.getItem('accessToken');
-        const storedUserId = localStorage.getItem('userId');
-        const storedEmail = localStorage.getItem('email');
-        const storedUsername = localStorage.getItem('username');
-
-        if (storedAccessToken && storedUserId && storedEmail && storedUsername) {
-            setAuthState({
-                accessToken: storedAccessToken,
-                userId: storedUserId,
-                email: storedEmail,
-                username: storedUsername,
-            });
-        }
-    }, []);
-
 
     const changeAuthState = (state) => {
-        localStorage.setItem('accessToken', state.accessToken)
-        localStorage.setItem('userId', state.userId)
-        localStorage.setItem('email', state.email)
-        localStorage.setItem('username', state.username);
-        setAuthState(state);
-    };
+        setAuthState(state)
+    }
 
     const contextData = {
         userId: authState.userId,
