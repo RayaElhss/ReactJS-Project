@@ -13,6 +13,7 @@ export default function CreateBlog() {
     const createBlog = useCreateBlog();
 
     const createHandler = async (values) => {
+        console.log('Form Data:', values);
         try {
             const { _id: blogId } = await createBlog(values);
             navigate(`/blogs/${blogId}/details`);
