@@ -11,11 +11,15 @@ export default function BackButton({ to = '/', children = '← Back', className 
     };
 
     return (
-        <button
-            className={`${styles.backButton} ${className}`} // Apply styles from the CSS module
-            onClick={handleNavigateBack}
-        >
-            {children} {/* Allow custom button text */}
-        </button>
+
+        <div className={styles.backButtonContainer}>
+            <button
+                type="button"
+                className={`btn btn-primary ${styles.backButton} ${className}`} // Apply styles from the CSS module
+                onClick={handleNavigateBack}
+            >
+                {children} {/* Allow custom button text */}
+            </button>
+        </div>
     );
 }

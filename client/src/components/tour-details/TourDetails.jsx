@@ -82,8 +82,10 @@ const TourDetails = () => {
                 ))}
             </ul>
 
-            <h3 className="box-title mt-5">Contact Information</h3>
-
+            <h3 className={`${styles.boxTitle} mt-5`}>
+                Contact Information</h3>
+            <p>Number: +359 893026546</p>
+            <p>Email: hey@abv.bg</p>
         </div>
     );
 };

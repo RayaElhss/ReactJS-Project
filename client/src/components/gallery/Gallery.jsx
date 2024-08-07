@@ -88,10 +88,9 @@ export default function Gallery() {
                 <h5 className="section-title px-3">Our Gallery</h5>
                 <h1 className="mb-4">Tourism & Traveling Gallery.</h1>
                 <p className="mb-0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                    tempore nam, architecto doloremque velit explicabo? Voluptate sunt
-                    eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum
-                    repellat a laborum quasi.
+                    Explore our curated gallery showcasing the captivating beauty of the world's most stunning destinations.
+                    From majestic landscapes and iconic landmarks to cultural festivals and hidden gems, our collection captures
+                    the essence of travel and adventure.
                 </p>
             </div>
             <div className="tab-class text-center">
@@ -127,13 +126,13 @@ export default function Gallery() {
                     </div>
                 </div>
                 {isHomePage && (
-                    <div className="d-flex justify-content-end mt-4">
+                    <div className="d-flex justify-content-center mt-4">
                         <button
                             type="button"
                             className="btn btn-primary"
                             onClick={handleViewAllClick} // Navigate to view all packages
                         >
-                            View All Packages
+                            View All Gallery
                         </button>
                     </div>
                 )}

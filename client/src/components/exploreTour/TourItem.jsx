@@ -32,7 +32,7 @@ export default function TourItem({
                 </div>
                 {offer && (
                     <div className={`tour-offer bg-${offerColor}`}>
-                        {offer}`
+                        {offer}% OFF
                     </div>
                 )}
                 <div className="national-plus-icon">

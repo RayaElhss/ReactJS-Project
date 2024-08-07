@@ -331,6 +331,92 @@
 
 }
 
+/* Navbar.css */
+
+/* Navbar styles for homepage */
+.navbar-home {
+    background-color: transparent;
+    color: var(--bs-white);
+}
+
+/* Navbar styles for other pages */
+.navbar-not-home {
+    background-color: #D3BFC7  ;
+    color: var(--bs-white);
+    /* Adjust the text color for better visibility */
+}
+
+.navbar-not-home .navbar-nav .nav-link {
+    color: var(--bs-white) !important;
+    /* Ensure links are visible */
+}
+
+.navbar-not-home .navbar-brand h1 {
+    color: black;
+    /* Ensure brand text is visible */
+}
+
+/* Optional: Adjust padding between navbar and content */
+
+
+/* Responsive adjustments if needed */
+@media (max-width: 991.98px) {
+    .navbar-not-home {
+        background-color: var(--bs-light);
+        /* Change to desired color */
+    }
+}
+
+.dropbtn {
+    background-color: #FF9393;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+
 
 /*** Carousel Hero Header Start ***/
 .carousel-header .carousel-control-prev,
@@ -1034,70 +1120,7 @@
 
 
 /*** Blog Start ***/
-.blog .blog-item .blog-img {
-    position: relative;
-}
 
-.blog .blog-item .blog-img .blog-info {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    background: rgba(255, 255, 255, .2);
-    color: var(--bs-white);
-}
-
-.blog .blog-item .blog-img .blog-img-inner {
-    position: relative;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-.blog .blog-item .blog-img .blog-img-inner .blog-icon {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-}
-
-.blog .blog-item .blog-img .blog-img-inner .blog-icon a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.blog .blog-item .blog-img:hover .blog-img-inner .blog-icon a {
-    opacity: 1;
-}
-
-.blog .blog-item .blog-img:hover .blog-img-inner .blog-icon {
-    height: 100%;
-    background: rgba(19, 53, 123, .6);
-    opacity: 1;
-}
-
-.blog .blog-item .blog-img .blog-img-inner {
-    overflow: hidden;
-}
-
-.blog .blog-item .blog-img .blog-img-inner img {
-    transition: 0.5s;
-}
-
-.blog .blog-item .blog-img:hover .blog-img-inner img {
-    transform: scale(1.2);
-}
 
 /*** Blog End ***/
 
@@ -1278,4 +1301,3 @@
 .icon-hover:hover i {
     color: #3b71ca !important;
 }
-

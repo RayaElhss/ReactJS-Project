@@ -3,11 +3,11 @@
 import About from "../about/About";
 import ExploreTour from "../exploreTour/ExploreTour";
 import Gallery from "../gallery/Gallery";
-import OurBlog from "../ourBlog/OurBlog";
+import Blog from "../blog/Blog";
 import Packages from "../packages/Packages";
-import ShareAdventures from "../shareAdventures/ShareAdventures";
 import Testimonials from "../testimonials/Testimonials";
 import TravelGuide from "../travelGuide/TravelGuide";
+import CreateBlog from "../blog-form/create-blog/CreateBlog";
 
 export default function Home() {
     return (
@@ -65,7 +65,9 @@ export default function Home() {
                                         Let's The World Together!
                                     </h1>
                                     <p className="mb-5 fs-5">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        Welcome to TripTales, your gateway to incredible adventures and unforgettable experiences!
+                                        Whether you're planning a relaxing beach vacation, a thrilling mountain trek, or an immersive
+                                        cultural journey, we're here to help you make it happen.
                                     </p>
                                     <div className="d-flex align-items-center justify-content-center">
 
@@ -98,7 +100,9 @@ export default function Home() {
                                         Find Your Perfect Tour At Travel
                                     </h1>
                                     <p className="mb-5 fs-5">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        At TripTales, we believe that travel is not just about reaching a destination,
+                                        but about the stories you create along the way. With our carefully curated travel
+                                        packages, insider tips, and passionate guides, we aim to make your travel dreams a reality.
                                     </p>
 
                                 </div>
@@ -126,10 +130,12 @@ export default function Home() {
                                         Explore The World
                                     </h4>
                                     <h1 className="display-2 text-capitalize text-white mb-4">
-                                        You Like To Go?
+                                        Have Fun!
                                     </h1>
                                     <p className="mb-5 fs-5">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        Explore breathtaking destinations, indulge in local cuisines, and uncover hidden
+                                        gems with our expertly crafted itineraries. Join us as we embark on adventures that
+                                        inspire, educate, and transform the way you see the world.
                                     </p>
 
                                 </div>
@@ -175,11 +181,10 @@ export default function Home() {
             <ExploreTour />
             <Packages /> {/* Homepage showing only 6 packages */}
             <Gallery />
-            <ShareAdventures />
             <TravelGuide />
-            <OurBlog />
+            <Blog />
             <Testimonials />
-            
+
         </>
     );
 }

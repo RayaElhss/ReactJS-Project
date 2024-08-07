@@ -4,12 +4,33 @@ import TourItem from "./TourItem";
 
 export default function TourCategories() {
     const [tours, setTours] = useState([]);
-    //const [loading, setLoading] = useState(true);
-    //const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        getAllTourCategories().then(result => setTours(result));
+        const fetchData = async () => {
+            try {
+                const result = await getAllTourCategories();
+                console.log("Fetched tours:", result); // Log the fetched data
+                setTours(result);
+            } catch (err) {
+                console.error("Error fetching tours:", err);
+                setError(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
     }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error loading tours: {error.message}</div>;
+    }
 
     return (
         <div className="tab-class text-center">

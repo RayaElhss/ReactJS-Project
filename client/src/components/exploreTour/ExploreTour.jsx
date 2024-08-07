@@ -17,7 +17,9 @@ export default function ExploreTour() {
                         The World
                     </h1>
                     <p className="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto                doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti                eum cum repellat a laborum quasi.
+                        Join us as we explore hidden gems, immerse ourselves in diverse cultures,
+                        and create unforgettable memories. With TripTales, every journey is a new story waiting to be told.
+                        Let us guide you to the world's most captivating locations and turn your travel dreams into reality.
                     </p>
                 </div>
                 <TourCategories />

@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './ToursPage.module.css';
 import Testimonials from '../testimonials/Testimonials';
 import Tours from './tours/Tours';
 import * as tourCategoriesAPI from '../../api/tourCategories-api';
 import * as toursAPI from '../../api/tours-api';
-
+import BackButton from "../back-button/BackButton"
 
 export default function ToursPage({ description }) {
     const { category } = useParams();
+    const navigate = useNavigate();
+
     console.log("Category from URL:", category);
 
     const [tourCategories, setTourCategories] = useState([]);
@@ -19,27 +21,35 @@ export default function ToursPage({ description }) {
 
 
     useEffect(() => {
-        tourCategoriesAPI.getAllTourCategories().then(result => {
-            setTourCategories(result);
-            // setLoading(false);
-        }).catch(err => {
-            console.error(err);
-            setError(err);
-        });
+        // Fetch tour categories and tours
+        const fetchToursAndCategories = async () => {
+            try {
+                const [tourCategories, fetchedTours] = await Promise.all([
+                    tourCategoriesAPI.getAllTourCategories(),
+                    toursAPI.getAllTours(),
+                ]);
 
-        toursAPI.getAllTours()
-            .then(result => {
-                setTours(result);
-            })
-            .catch(err => {
+                console.log('Fetched Tour Categories:', tourCategories);
+                console.log('Fetched Tours:', fetchedTours);
+
+                setTourCategories(tourCategories);
+
+                // Filter tours based on category
+                const filteredTours = fetchedTours.filter(
+                    tour => tour.category.toLowerCase() === category.toLowerCase()
+                );
+
+                setTours(filteredTours);
+            } catch (err) {
                 console.error(err);
                 setError(err);
-            })
-            .finally(() => {
+            } finally {
                 setLoading(false);
-            });
+            }
+        };
 
-    }, [])
+        fetchToursAndCategories();
+    }, [category]);
 
 
     if (loading) {
@@ -51,41 +61,27 @@ export default function ToursPage({ description }) {
     }
 
     // Filter tours based on the category from the URL
-    const filteredTourCategories = tourCategories.filter(tour => tour.category.toLowerCase() === category.toLowerCase());
-    const filteredTours = tours.filter(tour => tour.category.toLowerCase() === category.toLowerCase());
-
-    const tourDetails = filteredTourCategories.length > 0 ? filteredTourCategories[0] : {};
-
-    console.log('Filtered Tour Categories:', filteredTourCategories);
-    console.log('Filtered Tours:', filteredTours);
-
+    const tourDetails = tourCategories.find(
+        tourCategory => tourCategory.category.toLowerCase() === category.toLowerCase()
+    ) || {};
 
     return (
         <div>
-            {/* Back Button
-            <div>
-                <button
-                    className={styles.backButton} // Add custom styling for the button
-                    onClick={() => navigate('/packages')} // Navigate back to the previous page
-                >
-                    ← Back to All Tours
-                </button>
-            </div> */}
+
             <header className={styles.categoryHeader}>
-                <div className={styles.banner}>
-                    <img src={tourDetails.imageUrl} alt={`${category} Tours className=${styles.bannerImg}`} />
+
+            <div className={styles.banner} style={{ position: 'relative', marginTop: '45px' }}>
+                    {/* Position the button absolutely relative to this container */}
+                    <div className={styles.backButtonContainer}>
+                        <BackButton to="/tours" />
+                    </div>
+                    <img src={tourDetails.imageUrl} alt={`${category} Tours`} className={styles.bannerImg} />
                     <div className={styles.overlay}></div>
                     <div className={styles.bannerContent}>
                         <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
-                            <h5 className="section-title px-3">
-                                Tours
-                            </h5>
-                            <h1 className="mb-4">
-                                {category} Tours
-                            </h1>
-                            <p className="mb-0">
-                                {tourDetails.description}
-                            </p>
+                            <h5 className="section-title px-3">Tours</h5>
+                            <h1 className="mb-4">{category} Tours</h1>
+                            <p className="mb-0">{tourDetails.description}</p>
                         </div>
                         {tourDetails.offer && (
                             <div className={styles.specialOffer}>
@@ -101,7 +97,7 @@ export default function ToursPage({ description }) {
             </h2>
 
             {/* Pass the filtered tours to the Tours component */}
-            <Tours tours={filteredTours} />
+            <Tours tours={tours} />
 
             <Testimonials />
 

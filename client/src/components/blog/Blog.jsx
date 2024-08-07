@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Blog.module.css";
 import useBlogs from "../../hooks/useBlogs";
 import { useAuthContext } from "../../contexts/AuthContext";
-import { deletBlogPost } from "../../api/blogs-api";
+import { deleteBlogPost } from "../../api/blogs-api";
 import { useEffect, useState } from "react";
 
 export default function OurBlog() {
@@ -25,7 +25,7 @@ export default function OurBlog() {
         if (window.confirm("Are you sure you want to delete this blog post?")) {
             try {
                 setLocalBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== id));
-                await deletBlogPost(id, accessToken);
+                await deleteBlogPost(id, accessToken);
                 alert("Blog post deleted successfully.");
 
 
@@ -36,6 +36,8 @@ export default function OurBlog() {
             }
         }
     };
+
+    const isBlogsPage = location.pathname === '/blogs';
 
     return (
         <div className={`container-fluid blog py-5 ${styles.blog}`}>
@@ -53,7 +55,9 @@ export default function OurBlog() {
                         Popular Travel Blogs
                     </h1>
                     <p className="mb-0">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt tenetur sapiente                atque. Magni non explicabo beatae sit, vel reiciendis consectetur numquam id similique sunt error                obcaecati ducimus officia maiores.
+                        Dive into expert advice, insider tips, and inspiring journeys that will ignite your wanderlust
+                        and help you plan your next adventure. Whether you're a seasoned traveler or just starting your
+                        journey, our blog is your go-to resource for everything travel-related.
                     </p>
                 </div>
                 <div className="row g-4 justify-content-center">
@@ -143,17 +147,17 @@ export default function OurBlog() {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-4 button-container">
-                <button type="button" className="btn btn-primary mx-2">
-                    View All Blogs
-                </button>
+                {!isBlogsPage && ( // Render the "View All Blogs" button only if not on the blogs page
+                    <Link to="/blogs" className="btn btn-primary mx-2">
+                        View All Blogs
+                    </Link>
+                )}
                 {isAuthenticated && (
                     <Link to="/createBlog" className="btn btn-primary mx-2">
                         Create Blog
                     </Link>
                 )}
             </div>
-
-
         </div>
     );
 }

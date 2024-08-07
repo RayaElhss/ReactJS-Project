@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllTours } from "../api/tours-api";
+import { getAllTourCategories } from "../api/tourCategories-api";
 
 export default function useTours() {
     const [tours, setTours] = useState([]);
@@ -9,7 +10,8 @@ export default function useTours() {
     useEffect(() => {
         const loadTours = async () => {
             try {
-                const toursData = await getAllTours();
+                const toursData = await getAllTourCategories();
+                console.log('Fetched Tours:', toursData);
                 setTours(toursData);
                 setLoading(false);
             } catch (err) {

@@ -4,16 +4,37 @@ import { useEffect, useState } from 'react';
 import { getAllTours } from '../../../api/tours-api';
 
 export default function Tours({ tours: initialTours }) {
-
+    const { category } = useParams();
     const [tours, setTours] = useState(initialTours || []);
 
     useEffect(() => {
+        // Fetch tours if not passed as initial props
         if (initialTours.length === 0) {
             getAllTours()
-                .then(setTours)
-                .catch((error) => console.log('failed to fetch tourss', error));
+                .then(fetchedTours => {
+                    console.log("Fetched Tours:", fetchedTours);
+
+                    // Filter tours based on category, ensure case-insensitivity
+                    const filtered = fetchedTours.filter(tour =>
+                        tour.category.toLowerCase() === category.toLowerCase()
+                    );
+
+                    console.log("Filtered Tours after Fetch:", filtered);
+
+                    // Set tours to the filtered results
+                    setTours(filtered);
+                })
+                .catch(error => console.log('Failed to fetch tours', error));
+        } else {
+            // Filter initial tours by category
+            const filtered = initialTours.filter(tour =>
+                tour.category.toLowerCase() === category.toLowerCase()
+            );
+
+            // Set tours to the filtered results
+            setTours(filtered);
         }
-    }, [initialTours])
+    }, [initialTours, category]);
 
     return (
         <section className={styles.toursList}>
@@ -42,7 +63,8 @@ export default function Tours({ tours: initialTours }) {
             ) : (
                 <p style={{ fontSize: '40px', fontFamily: 'Bowlby One SC' }}>
                     No tours available for this category! :(
-                </p>)}
+                </p>
+            )}
         </section>
     );
 }

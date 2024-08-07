@@ -1,80 +1,84 @@
-import React from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuthContext } from '../../contexts/AuthContext';
+import useBlogs from '../../hooks/useBlogs';
+import styles from './Profile.module.css';
 
 export default function Profile() {
+    const { username, userId } = useAuthContext();
+    const { blogs, loading, error } = useBlogs();
+
+    const [followersCount, setFollowersCount] = useState(0);
+    const [userBlogs, setUserBlogs] = useState([]);
+    const [hasFollowed, setHasFollowed] = useState(false); // Track follow status
+
+    // Filter the blogs to show only those created by the current user
+    useEffect(() => {
+        if (blogs) {
+            setUserBlogs(blogs.filter(blog => blog._ownerId === userId));
+        }
+    }, [blogs, userId]);
+
+    const handleFollow = () => {
+        if (!hasFollowed) {
+            setFollowersCount(followersCount + 1);
+            setHasFollowed(true); // Prevent further follows
+        }
+    };
+
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>{error}</div>;
+
     return (
-        <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
-            <MDBContainer className="py-5 h-100">
-                <MDBRow className="justify-content-center align-items-center h-100">
-                    <MDBCol lg="9" xl="7">
-                        <MDBCard>
-                            <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '200px' }}>
-                                <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
-                                    <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
-                                        alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
-                                    <MDBBtn outline color="dark" style={{ height: '36px', overflow: 'visible' }}>
-                                        Edit profile
-                                    </MDBBtn>
-                                </div>
-                                <div className="ms-3" style={{ marginTop: '130px' }}>
-                                    <MDBTypography tag="h5">Andy Horwitz</MDBTypography>
-                                    <MDBCardText>New York</MDBCardText>
+        <div className={`container py-5 ${styles.profile}`}>
+            <div className={`card ${styles.profileCard}`}>
+                <div className="card-body text-center">
+                    <h2 className="card-title">Username: {username}</h2>
+                    <button
+                        className="btn btn-primary mt-3"
+                        onClick={handleFollow}
+                        disabled={hasFollowed} // Disable button if already followed
+                    >
+                        {hasFollowed ? 'Following' : 'Follow'}
+                    </button>
+                    <p className="mt-2">Followers: {followersCount}</p>
+                </div>
+            </div>
+
+            <div className="mt-5">
+                <h3 className="mb-4">Your Blog Posts</h3>
+                {userBlogs.length > 0 ? (
+                    <div className="row">
+                        {userBlogs.map(blog => (
+                            <div className="col-md-4 mb-4" key={blog._id}>
+                                <div className={`card ${styles.blogCard}`}>
+                                    <div className={styles.imageContainer}>
+                                        <img
+                                            src={blog.imageUrl}
+                                            alt={blog.title}
+                                            className={`card-img-top ${styles.blogImage}`}
+                                        />
+                                    </div>
+                                    <div className="card-body d-flex flex-column justify-content-between">
+                                        <h5 className="card-title">{blog.title}</h5>
+                                        <p className={`card-text ${styles.cardText}`}>
+                                            {blog.description}
+                                        </p>
+                                        <Link
+                                            to={`/blogs/${blog._id}`}
+                                            className="btn btn-primary mt-auto"
+                                        >
+                                            View Post
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
-                                <div className="d-flex justify-content-end text-center py-1">
-                                    <div>
-                                        <MDBCardText className="mb-1 h5">253</MDBCardText>
-                                        <MDBCardText className="small text-muted mb-0">Photos</MDBCardText>
-                                    </div>
-                                    <div className="px-3">
-                                        <MDBCardText className="mb-1 h5">1026</MDBCardText>
-                                        <MDBCardText className="small text-muted mb-0">Followers</MDBCardText>
-                                    </div>
-                                    <div>
-                                        <MDBCardText className="mb-1 h5">478</MDBCardText>
-                                        <MDBCardText className="small text-muted mb-0">Following</MDBCardText>
-                                    </div>
-                                </div>
-                            </div>
-                            <MDBCardBody className="text-black p-4">
-                                <div className="mb-5">
-                                    <p className="lead fw-normal mb-1">About</p>
-                                    <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
-                                        <MDBCardText className="font-italic mb-1">Web Developer</MDBCardText>
-                                        <MDBCardText className="font-italic mb-1">Lives in New York</MDBCardText>
-                                        <MDBCardText className="font-italic mb-0">Photographer</MDBCardText>
-                                    </div>
-                                </div>
-                                <div className="d-flex justify-content-between align-items-center mb-4">
-                                    <MDBCardText className="lead fw-normal mb-0">Recent photos</MDBCardText>
-                                    <MDBCardText className="mb-0"><a href="#!" className="text-muted">Show all</a></MDBCardText>
-                                </div>
-                                <MDBRow>
-                                    <MDBCol className="mb-2">
-                                        <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
-                                            alt="image 1" className="w-100 rounded-3" />
-                                    </MDBCol>
-                                    <MDBCol className="mb-2">
-                                        <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
-                                            alt="image 1" className="w-100 rounded-3" />
-                                    </MDBCol>
-                                </MDBRow>
-                                <MDBRow className="g-2">
-                                    <MDBCol className="mb-2">
-                                        <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
-                                            alt="image 1" className="w-100 rounded-3" />
-                                    </MDBCol>
-                                    <MDBCol className="mb-2">
-                                        <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
-                                            alt="image 1" className="w-100 rounded-3" />
-                                    </MDBCol>
-                                </MDBRow>
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
+                        ))}
+                    </div>
+                ) : (
+                    <p>You have not created any blog posts yet.</p>
+                )}
+            </div>
         </div>
     );
 }
