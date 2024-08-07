@@ -26,6 +26,12 @@ export default function BlogDetails() {
         fetchBlog();
     }, [blogId]);
 
+    const handleLike = async () => {
+        setBlog((prevBlog) => ({
+            ...prevBlog,
+            likes: (prevBlog.likes || 0) + 1,
+        }));
+    };
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
@@ -39,7 +45,7 @@ export default function BlogDetails() {
                 <p><strong>Date:</strong> {new Date(blog._createdOn).toLocaleDateString()}</p>
                 <p><strong>Description:</strong> {blog.description}</p>
                 <div className={styles.interactions}>
-                    <button className={styles.interactionButton}>
+                    <button className={styles.interactionButton} onClick={handleLike}>
                         <i className="fa fa-thumbs-up" /> {blog.likes || 0} Likes
                     </button>
                     <button className={styles.interactionButton}>

@@ -45,12 +45,14 @@ export const updateBlogPost = async (id, updatedData) => {
     }
 };
 
+
+
 const blogsAPI = {
     create,
     getAllBlogs,
     getBlogById,
     updateBlogPost,
-    deletBlogPost
+    deletBlogPost,
 }
 
 export default blogsAPI;
