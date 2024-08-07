@@ -54,7 +54,7 @@ export default function Login() {
                                     )}
 
                                     <form onSubmit={submitHandler}>
-                                        <label
+                                        <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example3cg"
                                         >
@@ -75,7 +75,7 @@ export default function Login() {
                                             />
 
                                         </div>
-                                        <label
+                                        <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example4cg"
                                         >

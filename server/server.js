@@ -1382,6 +1382,26 @@
                 "_createdOn": 1722981456719
             }
         },
+        guies: {
+            "f47cad90-cb5d-43e5-a295-b7692275fe1d": {
+                "name": "Jon Doe",
+                "designation": "Tour Guide",
+                "imageUrl": "https://www.checkfront.com/wp-content/uploads/2022/06/tour-guide-rules.jpg",
+                "_id": "f47cad90-cb5d-43e5-a295-b7692275fe1d"
+            },
+            "0c901381-0b4a-461b-8428-e43bc412e4b0": {
+                "name": "Marylyn Masons",
+                "designation": "Tour Guide",
+                "imageUrl": "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
+                "_id": "0c901381-0b4a-461b-8428-e43bc412e4b0"
+            },
+            "a264646a-df63-42d7-beb9-216baae2afe4": {
+                "name": "Walter White",
+                "designation": "Tour Guide",
+                "imageUrl": "https://media.istockphoto.com/id/661799106/photo/portrait-of-a-young-french-man.jpg?s=612x612&w=0&k=20&c=M-8ccbYQZCvQWmKLLyDF5mYjF3KaBTQwX6HDdzvw_pk=",
+                "_id": "a264646a-df63-42d7-beb9-216baae2afe4"
+            }
+        },
         recipes: {
             "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
