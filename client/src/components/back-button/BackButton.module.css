@@ -1,7 +1,12 @@
-/* src/components/BackButton.module.css */
+/* src/components/back-button/BackButton.module.css */
+.backButtonContainer {
+    position: relative; /* Container for positioning */
+    width: 100%; /* Full width of parent container */
+    height: 100%; /* Full height of parent container */
+}
 
 .backButton {
-    background-color: #4CAF50; /* Green background */
+    background-color: #007bff; /* Blue background */
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 10px 20px; /* Some padding */
@@ -9,12 +14,16 @@
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Inline-block to allow margin */
     font-size: 16px; /* Set a font size */
-    margin: 40px 2px; /* Some margin */
+    margin: 10px; /* Some margin */
     cursor: pointer; /* Add a pointer cursor on hover */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition for background */
+    position: absolute; /* Fix the button position */
+    top: 30px; /* Adjust top position to be below the navbar */
+    left: 20px; /* Distance from left of the viewport */
+    z-index: 999; /* Ensure it appears above other elements, but not the navbar */
 }
 
 .backButton:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #0056b3; /* Darker blue on hover */
 }

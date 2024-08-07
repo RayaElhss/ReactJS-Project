@@ -10,8 +10,6 @@ import About from './components/about/About';
 import ExploreTour from './components/exploreTour/ExploreTour';
 import Packages from './components/packages/Packages.jsx';
 import Gallery from './components/gallery/Gallery';
-import ShareAdventures from './components/shareAdventures/ShareAdventures';
-import TravelGuide from './components/travelGuide/TravelGuide';
 import Blog from './components/blog/Blog';
 import Footer from './components/footer/Footer';
 import Register from './components/register/Register';
@@ -32,6 +30,8 @@ import BlogDetails from './components/blog-details/BlogDetails.jsx';
 
 import PrivateRoute from './guards/PrivateRoute';
 import PublicRoute from './guards/PublicRoute';
+import ContactUs from './components/contact-us/ContactUs.jsx';
+import TravelGuide from './components/travelGuide/TravelGuide.jsx';
 
 function App() {
 
@@ -46,18 +46,21 @@ function App() {
         <Route path="/about" element={<PublicRoute element={About} restricted={false} />} />
         <Route path="/packages" element={<PublicRoute element={Packages} restricted={false} />} />
         <Route path="/gallery" element={<PublicRoute element={Gallery} restricted={false} />} />
-        <Route path="/share-adventures" element={<PublicRoute element={ShareAdventures} restricted={false} />} />
         <Route path="/blogs" element={<PublicRoute element={Blog} restricted={false} />} />
         <Route path="/testimonials" element={<PublicRoute element={Testimonials} restricted={false} />} />
         <Route path="/register" element={<PublicRoute element={Register} restricted={true} />} />
         <Route path="/login" element={<PublicRoute element={Login} restricted={true} />} />
+        <Route path="/tours" element={<PublicRoute element={ExploreTour} restricted={false} />} />
+        <Route path="/guides" element={<PublicRoute element={TravelGuide} restricted={false} />} />
+        <Route path="/tourCategories/:category" element={<PublicRoute element={ToursPage} restricted={false} />} />
+        <Route path="/contact" element={<PublicRoute element={ContactUs} restricted={false} />} />
+
 
         {/* Private routes */}
         <Route path="/logout" element={<PrivateRoute element={Logout} />} />
         <Route path="/profile" element={<PrivateRoute element={Profile} />} />
         <Route path="/test" element={<PrivateRoute element={Test} />} />
         <Route path="/details" element={<PrivateRoute element={PackageDetails} />} />
-        <Route path="/tourCategories/:category" element={<PrivateRoute element={ToursPage} />} />
         <Route path="/tours/:id" element={<PrivateRoute element={TourDetails} />} />
         <Route path="/tours" element={<PrivateRoute element={ExploreTour} />} />
         <Route path="/packages/:id" element={<PrivateRoute element={PackageDetails} />} />

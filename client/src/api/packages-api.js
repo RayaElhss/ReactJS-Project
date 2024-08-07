@@ -7,11 +7,11 @@ export const getAllPackages = async () => {
         const result = await request.get(baseUrl);
         const packages = Object.values(result);
         return packages;
-      } catch (error) {
+    } catch (error) {
         console.error('Error fetching packages:', error);
         throw error;  // Propagate the error to be handled by the calling component
-      }
-    };
+    }
+};
 
 export const getPackageById = async (id) => {
     try {

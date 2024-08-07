@@ -7,6 +7,8 @@ export const getAllTourCategories = async () => {
     try {
         const result = await request.get(baseUrl);
         const tourCategories = Object.values(result);
+        console.log(tourCategories);
+        
         return tourCategories;
     } catch (err) {
         console.log(err.message);
