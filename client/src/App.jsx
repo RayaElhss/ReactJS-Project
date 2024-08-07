@@ -27,6 +27,11 @@ import Navbar from "./components/navbar/Navbar";
 import CreateBlog from './components/blog-form/create-blog/CreateBlog.jsx';
 import Logout from './components/logout/Logout.jsx';
 import { AuthContextProvider } from './contexts/AuthContext.jsx';
+import EditBlog from './components/blog-form/edit-blog/EditBlog.jsx';
+import BlogDetails from './components/blog-details/BlogDetails.jsx';
+
+import PrivateRoute from './guards/PrivateRoute';
+import PublicRoute from './guards/PublicRoute';
 
 function App() {
 
@@ -36,28 +41,32 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/packages" element={<Packages />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/share-adventures" element={<ShareAdventures />} />
-        <Route path="/blogs" element={<Blog />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/details" element={<PackageDetails />} />
-        <Route path="/tourCategories/:category" element={<ToursPage />} />
-        <Route path="/tours/:id" element={<TourDetails />} />
-        <Route path="/tours" element={<ExploreTour />} />
-        <Route path="/packages/:id" element={<PackageDetails />} />
-        <Route path="/allPackages" element={<Packages />} /> {/* Page showing all packages */}
-        <Route path="/allGallery" element={<Gallery />} /> {/* Page showing all gallery */}
-        <Route path="/createBlog" element={<CreateBlog />} />
-        <Route path="/guides" element={<TravelGuide />} />
+        {/* Public routes */}
+        <Route path="/" element={<PublicRoute element={Home} restricted={false} />} />
+        <Route path="/about" element={<PublicRoute element={About} restricted={false} />} />
+        <Route path="/packages" element={<PublicRoute element={Packages} restricted={false} />} />
+        <Route path="/gallery" element={<PublicRoute element={Gallery} restricted={false} />} />
+        <Route path="/share-adventures" element={<PublicRoute element={ShareAdventures} restricted={false} />} />
+        <Route path="/blogs" element={<PublicRoute element={Blog} restricted={false} />} />
+        <Route path="/testimonials" element={<PublicRoute element={Testimonials} restricted={false} />} />
+        <Route path="/register" element={<PublicRoute element={Register} restricted={true} />} />
+        <Route path="/login" element={<PublicRoute element={Login} restricted={true} />} />
 
+        {/* Private routes */}
+        <Route path="/logout" element={<PrivateRoute element={Logout} />} />
+        <Route path="/profile" element={<PrivateRoute element={Profile} />} />
+        <Route path="/test" element={<PrivateRoute element={Test} />} />
+        <Route path="/details" element={<PrivateRoute element={PackageDetails} />} />
+        <Route path="/tourCategories/:category" element={<PrivateRoute element={ToursPage} />} />
+        <Route path="/tours/:id" element={<PrivateRoute element={TourDetails} />} />
+        <Route path="/tours" element={<PrivateRoute element={ExploreTour} />} />
+        <Route path="/packages/:id" element={<PrivateRoute element={PackageDetails} />} />
+        <Route path="/allPackages" element={<PrivateRoute element={Packages} />} />
+        <Route path="/allGallery" element={<PrivateRoute element={Gallery} />} />
+        <Route path="/createBlog" element={<PrivateRoute element={CreateBlog} />} />
+        <Route path="/guides" element={<PrivateRoute element={TravelGuide} />} />
+        <Route path="/blogs/edit/:blogId" element={<PrivateRoute element={EditBlog} />} />
+        <Route path="/blogs/:blogId" element={<PrivateRoute element={BlogDetails} />} />
       </Routes>
 
       <Footer />
