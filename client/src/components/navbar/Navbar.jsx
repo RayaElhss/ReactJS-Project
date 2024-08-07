@@ -20,7 +20,13 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className="container-fluid position-relative p-0">
+        <div className="container-fluid position-relative p-0" 
+        // style={{
+        //     marginBottom: '70px', // Add 100px margin below the navbar
+        //     backgroundColor: 'transparent',
+        //     transition: 'margin-bottom 0.3s ease', // Optional: Smooth transition for margin change
+        // }}
+        >
             <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a className="navbar-brand p-0" href="/">
                     <h1 className="m-0">
@@ -36,13 +42,12 @@ export default function Navbar() {
                         <a className="nav-item nav-link active" href="/">Home</a>
                         <a className="nav-item nav-link" href="/about">About</a>
                         <a className="nav-item nav-link" href="/packages">Packages</a>
-                        <a className="nav-item nav-link" href="/blog">Blog</a>
+                        <a className="nav-item nav-link" href="/blogs">Blog</a>
                         <div className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/pages">Pages</a>
                             <div className="dropdown-menu m-0">
                                 <a className="dropdown-item" href="/tours">Explore Tour</a>
                                 <a className="dropdown-item" href="/gallery">Our Gallery</a>
-                                <a className="dropdown-item" href="booking.html">Travel Booking</a>
                                 <a className="dropdown-item" href="/guides">Travel Guides</a>
                             </div>
                         </div>

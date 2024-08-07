@@ -38,12 +38,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/explore-tour" element={<ExploreTour />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/share-adventures" element={<ShareAdventures />} />
-        <Route path="/travel-guide" element={<TravelGuide />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogs" element={<Blog />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
@@ -53,10 +51,13 @@ function App() {
         <Route path="/details" element={<PackageDetails />} />
         <Route path="/tourCategories/:category" element={<ToursPage />} />
         <Route path="/tours/:id" element={<TourDetails />} />
+        <Route path="/tours" element={<ExploreTour />} />
         <Route path="/packages/:id" element={<PackageDetails />} />
         <Route path="/allPackages" element={<Packages />} /> {/* Page showing all packages */}
         <Route path="/allGallery" element={<Gallery />} /> {/* Page showing all gallery */}
-        <Route path="/createBlog" element={<CreateBlog />} /> {/* Page showing all gallery */}
+        <Route path="/createBlog" element={<CreateBlog />} />
+        <Route path="/guides" element={<TravelGuide />} />
+
       </Routes>
 
       <Footer />
