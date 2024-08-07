@@ -8,7 +8,7 @@ export const register = (username, email, password) => request.post(`${baseUrl}/
 
 export const logout = async () => {
     try {
-        return await request.get(`${baseUrl}/logout`);
+        return await request.get(`${baseUrl}/logout`, true);
     } catch (error) {
         console.error("Logout error:", error.message || error);
         throw error;
