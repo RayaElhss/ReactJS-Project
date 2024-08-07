@@ -6,6 +6,7 @@ import { updateBlogPost } from "../../../api/blogs-api";
 import { useEffect, useState } from "react";
 
 import styles from "./EditBlog.module.css";
+import { useBlogValidation } from "../../../hooks/useBlogValidation";
 
 
 export default function EditBlog() {
@@ -17,18 +18,26 @@ export default function EditBlog() {
 
     const [initialValuesSet, setInitialValuesSet] = useState(false);
 
+    const { fieldErrors, validateFields } = useBlogValidation();
+
     const { values, changeHandler, submitHandler, setValues } = useForm(
         {
             title: blog ? blog.title : "",
             imageUrl: blog ? blog.imageUrl : "",
             description: blog ? blog.description : "",
         }, async (updatedData) => {
+            const validationErrors = validateFields(updatedData);
+
+            // If there are validation errors, stop the submission
+            if (Object.keys(validationErrors).length > 0) {
+                return;
+            }
+
             try {
                 await updateBlogPost(blogId, updatedData, accessToken);
                 navigate(`/blogs`);
             } catch (error) {
                 console.log("Failed to update blog post:", error);
-
             }
         });
 
@@ -62,8 +71,10 @@ export default function EditBlog() {
                         onChange={changeHandler}
                         placeholder="Enter a blog title..."
                         className={styles.inputText}
-                        required
                     />
+                    {fieldErrors.title && (
+                        <small className="text-danger">{fieldErrors.title}</small>
+                    )}
 
                     <label htmlFor="imageUrl">Image URL:</label>
                     <input
@@ -74,8 +85,10 @@ export default function EditBlog() {
                         onChange={changeHandler}
                         placeholder="Upload a photo..."
                         className={styles.inputText}
-                        required
                     />
+                    {fieldErrors.imageUrl && (
+                        <small className="text-danger">{fieldErrors.imageUrl}</small>
+                    )}
 
                     <label htmlFor="description">Description:</label>
                     <textarea
@@ -85,8 +98,10 @@ export default function EditBlog() {
                         onChange={changeHandler}
                         placeholder="Enter blog description..."
                         className={styles.textarea}
-                        required
                     ></textarea>
+                    {fieldErrors.description && (
+                        <small className="text-danger">{fieldErrors.description}</small>
+                    )}
 
                     <input className={styles.submitButton} type="submit" value="Update Blog" />
                 </div>
