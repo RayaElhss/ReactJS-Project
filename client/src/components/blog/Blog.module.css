@@ -1,5 +1,69 @@
+.blog .blog-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px; /* Fixed height for uniformity */
+}
+
+.blog .blog-item .blog-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    flex-grow: 1; /* Allows the content to stretch */
+}
+
+.blog .blog-item .blog-content h4, /* Adjust the heading styling if needed */
+.blog .blog-item .blog-content p {
+    margin: 0;
+    margin-bottom: 10px; /* Add some spacing between content */
+    line-height: 1.5; /* Improve readability */
+}
+
+.blog .blog-item .blog-content a.btn {
+    align-self: flex-start;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: auto; /* Pushes button to the bottom */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.blog .blog-item .blog-content a.btn:hover {
+    background-color: #0056b3;
+}
+
+.blog .blog-item:hover {
+    transform: translateY(-5px); /* Add a subtle hover effect */
+}
+
 .blog .blog-item .blog-img {
     position: relative;
+    height: 250px; /* Set a fixed height for the image section */
+    overflow: hidden;
+}
+
+.blog .blog-item .blog-img .blog-img-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.blog .blog-item .blog-img .blog-img-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
 }
 
 .blog .blog-item .blog-img .blog-info {
@@ -8,57 +72,9 @@
     left: 0;
     bottom: 0;
     display: flex;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, 0.2);
     color: var(--bs-white);
-}
-
-.blog .blog-item .blog-img .blog-img-inner {
-    position: relative;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    overflow: hidden;
-    height: 250px;
-}
-
-.blog .blog-item .blog-img .blog-img-inner .blog-icon {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-    opacity: 1;
-}
-
-.blog .blog-item .blog-img .blog-img-inner .blog-icon a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.blog .blog-item .blog-img:hover .blog-img-inner .blog-icon a {
-    opacity: 1;
-}
-
-.blog .blog-item .blog-img:hover .blog-img-inner .blog-icon {
-    height: 100%;
-    background: rgba(19, 53, 123, .6);
-}
-
-.blog .blog-item .blog-img .blog-img-inner img {
-    transition: 0.5s;
-    width: 100%;
-    height: 100%;
-    /* Make the image fill the container */
-    object-fit: cover;
+    padding: 5px;
 }
 
 .blog .blog-item .blog-img:hover .blog-img-inner img {

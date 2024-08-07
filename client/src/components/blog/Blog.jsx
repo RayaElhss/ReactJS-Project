@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function OurBlog() {
     const { blogs, loading, error } = useBlogs();
-    const { username } = useAuthContext();
-    const { userId, accessToken } = useAuthContext();
+    const { username, userId, accessToken } = useAuthContext();
 
     console.log("Current User's userId:", userId);
 
@@ -36,8 +35,7 @@ export default function OurBlog() {
                 alert("Failed to delete the blog post.");
             }
         }
-    }
-
+    };
 
     return (
         <div className={`container-fluid blog py-5 ${styles.blog}`}>
@@ -118,6 +116,7 @@ export default function OurBlog() {
                                     >
                                         View post
                                     </Link>
+                                   
                                     {blog._ownerId === userId && (
                                         <>
                                             <Link
