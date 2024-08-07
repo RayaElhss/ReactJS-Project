@@ -81,20 +81,20 @@ export default function OurBlog() {
                                             <i className="fa fa-calendar-alt text-primary me-2" />
                                             {new Date(blog._createdOn).toLocaleDateString()}
                                         </small>
-                                        <a
+                                        <Link
                                             className="btn-hover flex-fill text-center text-white border-end py-2"
-                                            href="#"
+                                            to={`/blogs/${blog._id}`}
                                         >
                                             <i className="fa fa-thumbs-up text-primary me-2" />
                                             {blog.likes || 0} {/* likes count */}
-                                        </a>
-                                        <a
+                                        </Link>
+                                        <Link
                                             className="btn-hover flex-fill text-center text-white py-2"
-                                            href="#"
+                                            to={`/blogs/${blog._id}`}
                                         >
                                             <i className="fa fa-comments text-primary me-2" />
                                             {blog.comments?.length || 0}
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="blog-content border border-top-0 rounded-bottom p-4">
@@ -116,7 +116,7 @@ export default function OurBlog() {
                                     >
                                         View post
                                     </Link>
-                                   
+
                                     {blog._ownerId === userId && (
                                         <>
                                             <Link
