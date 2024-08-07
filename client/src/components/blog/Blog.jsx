@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function OurBlog() {
     const { blogs, loading, error } = useBlogs();
-    const { username, userId, accessToken } = useAuthContext();
+    const { username, userId, accessToken, isAuthenticated } = useAuthContext();
 
     console.log("Current User's userId:", userId);
 
@@ -146,9 +146,11 @@ export default function OurBlog() {
                 <button type="button" className="btn btn-primary mx-2">
                     View All Blogs
                 </button>
-                <Link to="/createBlog" className="btn btn-primary mx-2">
-                    Create Blog
-                </Link>
+                {isAuthenticated && (
+                    <Link to="/createBlog" className="btn btn-primary mx-2">
+                        Create Blog
+                    </Link>
+                )}
             </div>
 
 

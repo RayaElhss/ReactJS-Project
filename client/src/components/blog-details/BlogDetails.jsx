@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getBlogById } from "../../api/blogs-api";
 import styles from "./BlogDetails.module.css";
+import CommentForm from "../comment-form/CommentForm";
 
 
 export default function BlogDetails() {
@@ -10,12 +11,16 @@ export default function BlogDetails() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [likedPosts, setLikedPosts] = useState({});
+    const [comments, setComments] = useState([]);
+    const [commentsVisible, setCommentsVisible] = useState(false);
+    const [commentFormVisible, setCommentFormVisible] = useState(false);
 
     useEffect(() => {
         const fetchBlog = async () => {
             try {
                 const blogData = await getBlogById(blogId);
                 setBlog(blogData);
+                setComments(blogData.comments || []);
             } catch (err) {
                 console.error("Error fetching blog details:", err);
                 setError("Failed to load blog details.");
@@ -45,6 +50,23 @@ export default function BlogDetails() {
         }));
     };
 
+    const handleCommentSubmit = (comment) => {
+        const newComment = {
+            author: "Anonymous", // Default author for new comments
+            content: comment,
+        };
+        setComments((prevComments) => [...prevComments, newComment]);
+    }
+
+    const toggleCommentsVisibility = () => {
+        setCommentsVisible((prevVisibility) => !prevVisibility);
+    };
+
+    const toggleCommentFormVisibility = () => {
+        setCommentFormVisible((prevVisibility) => !prevVisibility);
+    };
+
+
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
 
@@ -62,23 +84,35 @@ export default function BlogDetails() {
                         <i className="fa fa-thumbs-up" /> {blog.likes || 0} Likes
                     </button>
 
-                    <button className={styles.interactionButton}>
-                        <i className="fa fa-comments" /> {blog.comments?.length || 0} Comments
+                    <button className={styles.interactionButton} onClick={toggleCommentsVisibility}>
+                        <i className="fa fa-comments" /> {comments.length || 0} Comments
+
+                    </button>
+
+                    <button className={styles.interactionButton} onClick={toggleCommentFormVisibility}>
+                        <i className="fa fa-plus" /> Add Comment
                     </button>
                 </div>
 
 
-                <ul>
-                    {blog.comments && blog.comments.length > 0 ? (
-                        blog.comments.map((comment, index) => (
-                            <li key={index}>
-                                <strong>{comment.author}:</strong> {comment.content}
-                            </li>
-                        ))
-                    ) : (
-                        <li>No comments yet.</li>
-                    )}
-                </ul>
+                {commentsVisible && (
+                    <ul>
+                        {comments.length > 0 ? (
+                            comments.map((comment, index) => (
+                                <li key={index}>
+                                    <strong>{comment.author}:</strong> {comment.content}
+                                </li>
+                            ))
+                        ) : (
+                            <li>No comments yet.</li>
+                        )}
+                    </ul>
+                )}
+
+                {commentFormVisible && (
+                    <CommentForm onSubmit={handleCommentSubmit} />
+                )}
+
             </div>
         </div>
     );
