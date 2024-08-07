@@ -1,0 +1,98 @@
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Make sure the container takes full viewport height */
+    background: url('https://bookcottages.com/wp-content/uploads/2023/06/Depositphotos_326092586_L.jpg') no-repeat center center fixed;
+    /* Replace the URL with your desired image URL */
+    background-size: cover;
+    /* Ensures the image covers the entire container */
+    background-color: #f0f0f0;
+    /* Fallback color in case the image doesn't load */
+}
+
+#createPage {
+    position: relative;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(62, 68, 67, 0.85);
+    /* Semi-transparent background for readability over the image */
+    background: blue;
+    box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
+    margin: 0 auto;
+    /* Center the form horizontally */
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Add spacing between elements */
+}
+
+h1 {
+    margin-bottom: 20px;
+    /* Add space below the heading */
+}
+
+label {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 0px;
+    /* Add space below labels */
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.inputText {
+    width: 100%;
+    max-width: 700px;
+    background: #ecf0f3;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    border: none;
+    outline: none;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 700px;
+    height: 100px;
+    border: 2px solid #86a480;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #ecf0f3;
+    margin-top: 7px;
+    margin-bottom: 25px;
+    color: black;
+    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    resize: vertical;
+
+}
+
+.submitButton {
+    background: white;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 90px;
+    box-shadow: 0px 0px 10px #000;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+    background: orange;
+    color: white;
+
+}

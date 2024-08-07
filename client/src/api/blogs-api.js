@@ -4,11 +4,6 @@ const baseUrl = 'http://localhost:3030/data/blogs';
 
 export const create = (blogData) => request.post(`${baseUrl}`, blogData, true);
 
-const blogsAPI = {
-    create
-};
-
-export default blogsAPI;
 
 export const getAllBlogs = async () => {
     try {
@@ -30,3 +25,22 @@ export const getBlogById = async (id) => {
         throw error;
     }
 };
+
+export const updateBlogPost = async (id, updatedData, token) => {
+    try {
+        const response = await request.put(`${baseUrl}/${id}`, updatedData, token);
+        return response;
+    } catch (error) {
+        console.error('Error updating blog post:', error);
+        throw error;
+    }
+};
+
+const blogsAPI = {
+    create,
+    getAllBlogs,
+    getBlogById,
+    updateBlogPost
+}
+
+export default blogsAPI;
