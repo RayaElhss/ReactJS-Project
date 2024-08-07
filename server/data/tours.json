@@ -8,10 +8,10 @@
         "offerExpiration": "2024-09-30",
         "duration": "5 Days / 4 Nights",
         "images": [
-            "https://www.example.com/images/paris-1.jpg",
-            "https://www.example.com/images/paris-2.jpg",
-            "https://www.example.com/images/paris-3.jpg",
-            "https://www.example.com/images/paris-4.jpg"
+            "https://media.cntraveler.com/photos/63e6b44a71cc5230e7788d4f/4:3/w_4760,h_3570,c_limit/Paris_GettyImages-601762971.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/640px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+            "https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900",
+            "https://cdn.britannica.com/36/135436-050-ED1D0FCE/skyline-Eiffel-Tower-France-Paris.jpg"
         ],
         "highlights": [
             "Visit to the Eiffel Tower with priority access",
@@ -64,7 +64,6 @@
         ],
         "_id": "a8ef1d96-a375-4d5f-b2d5-69672a47288b"
     },
-
     "80706b59-2ead-47bf-a089-4ddf0aaf92f2": {
         "title": "Venice Weekend Escape",
         "category": "Weekend",
@@ -74,10 +73,10 @@
         "offerExpiration": "2024-10-15",
         "duration": "3 Days / 2 Nights",
         "images": [
-            "https://www.example.com/images/venice-1.jpg",
-            "https://www.example.com/images/venice-2.jpg",
-            "https://www.example.com/images/venice-3.jpg",
-            "https://www.example.com/images/venice-4.jpg"
+            "https://lp-cms-production.imgix.net/2021-06/GettyRF_543346423.jpg?w=600&h=400",
+            "https://cdn.britannica.com/62/153462-050-3D4F41AF/Grand-Canal-Venice.jpg",
+            "https://static.toiimg.com/thumb/98477635/venice.jpg?width=636&height=358&resize=4",
+            "https://www.qantas.com/travelinsider/en/explore/europe/italy/venice/things-you-need-to-know-before-you-go-to-venice/_jcr_content/parsysTop/hero.img.1440.high.jpg/1535006246068.jpg"
         ],
         "highlights": [
             "Gondola ride through the canals of Venice",
@@ -117,7 +116,6 @@
         ],
         "_id": "80706b59-2ead-47bf-a089-4ddf0aaf92f2"
     },
-
     "056b6820-cf3f-45b1-b54f-3949d8c4253a": {
         "title": "Tokyo Weekend Adventure",
         "category": "Weekend",
@@ -127,10 +125,10 @@
         "offerExpiration": "2024-11-30",
         "duration": "3 Days / 2 Nights",
         "images": [
-            "https://www.example.com/images/tokyo-1.jpg",
-            "https://www.example.com/images/tokyo-2.jpg",
-            "https://www.example.com/images/tokyo-3.jpg",
-            "https://www.example.com/images/tokyo-4.jpg"
+            "https://media.nomadicmatt.com/2024/tokyothings.jpeg",
+            "https://www.gotokyo.org/en/destinations/southern-tokyo/images/499_0354_2.jpg",
+            "https://www.travelandleisure.com/thmb/VscfMXHNO6uBpaX2cuIW1q2ZtA8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tokyo-japan-TOKYOTG0621-52012ff551dc46c4a87ac8e3151307a4.jpg",
+            "https://globalnews.ca/wp-content/uploads/2023/01/GettyImages-1201905814.jpg?quality=85&strip=all&w=1200"
         ],
         "highlights": [
             "Visit to Tokyo Tower and Skytree",
@@ -170,7 +168,6 @@
         ],
         "_id": "056b6820-cf3f-45b1-b54f-3949d8c4253a"
     },
-
     "7648efda-34a2-478e-a4b9-073b3dd05234": {
         "title": "Barcelona Weekend Delight",
         "category": "Weekend",
@@ -180,10 +177,10 @@
         "offerExpiration": "2024-09-20",
         "duration": "3 Days / 2 Nights",
         "images": [
-            "https://www.example.com/images/barcelona-1.jpg",
-            "https://www.example.com/images/barcelona-2.jpg",
-            "https://www.example.com/images/barcelona-3.jpg",
-            "https://www.example.com/images/barcelona-4.jpg"
+            "https://st3.idealista.com/news/archivos/styles/fullwidth_xl/public/2023-10/media/image/barrio_de_la_barceloneta_0.jpeg?VersionId=f1zNKt9a.uIfCYhct0WellvdMEoxrnyj&itok=x9CjLjaY",
+            "https://static.independent.co.uk/2023/03/10/14/iStock-1320014700.jpg",
+            "https://www.sixt.co.uk/magazine/wp-content/uploads//sites/11/2023/02/barcelona-park-guell-1024x678-1.jpg",
+            "https://www.findingtheuniverse.com/wp-content/uploads/2022/05/Casa-Batllo-Barcelona_by_Laurence-Norah-2.jpg"
         ],
         "highlights": [
             "Visit to Sagrada Familia",
@@ -222,5 +219,353 @@
             "Take advantage of Barcelona's extensive public transport system."
         ],
         "_id": "7648efda-34a2-478e-a4b9-073b3dd05234"
+    },
+    "9a6ad268-3806-4704-870b-9fef9838e512": {
+        "title": "Pacific Coast Highway Adventure",
+        "category": "roadTrip",
+        "description": "Experience the stunning vistas of California’s iconic coastal highway. This road trip takes you through breathtaking landscapes and charming seaside towns.",
+        "price": 1299,
+        "offer": "15% Off",
+        "offerExpiration": "2024-10-15",
+        "duration": "7 Days / 6 Nights",
+        "images": [
+            "https://cdn.britannica.com/01/219001-050-B8A9B820/Pacific-Coast-Highway-California.jpg",
+            "https://www.example.com/images/pacific-coast-2.jpg",
+            "https://www.example.com/images/pacific-coast-3.jpg",
+            "https://www.example.com/images/pacific-coast-4.jpg"
+        ],
+        "highlights": [
+            "Drive along Big Sur’s rugged coastline",
+            "Visit Monterey Bay Aquarium",
+            "Explore Santa Barbara’s Spanish architecture",
+            "Tour Hearst Castle",
+            "Wine tasting in Napa Valley"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrive in San Francisco and pick up your rental car. Enjoy the evening in the city."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Drive to Monterey. Visit the Monterey Bay Aquarium."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Continue to Big Sur. Enjoy a scenic drive and hiking in the area."
+            },
+            {
+                "day": "Day 4",
+                "activities": "Head to San Luis Obispo with a stop at Hearst Castle."
+            },
+            {
+                "day": "Day 5",
+                "activities": "Explore Santa Barbara. Relax on the beach or visit the local wineries."
+            },
+            {
+                "day": "Day 6",
+                "activities": "Drive to Los Angeles. Explore Hollywood and Santa Monica."
+            },
+            {
+                "day": "Day 7",
+                "activities": "Visit Napa Valley for wine tasting before returning to San Francisco."
+            }
+        ],
+        "inclusions": [
+            "6 nights’ accommodation in various hotels",
+            "Car rental with unlimited mileage",
+            "Daily breakfast",
+            "Entry tickets for mentioned attractions"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Keep your camera ready for breathtaking views along the route.",
+            "Try local seafood specialties in coastal towns."
+        ],
+        "_id": "9a6ad268-3806-4704-870b-9fef9838e512"
+    },
+    "4b0f420b-9c5c-4045-97ec-1f155841c622": {
+        "title": "The Great Ocean Road Trip",
+        "category": "roadTrip",
+        "description": "Embark on a journey along Australia’s Great Ocean Road, renowned for its stunning ocean views, rainforests, and surf beaches.",
+        "price": 1149,
+        "offer": "10% Off",
+        "offerExpiration": "2024-11-05",
+        "duration": "5 Days / 4 Nights",
+        "images": [
+            "https://www.australia.com/content/australia/en/places/melbourne-and-surrounds/guide-to-the-great-ocean-road/_jcr_content/mainParsys/image_8cbb.img.640.428.jpg",
+            "https://www.example.com/images/great-ocean-road-2.jpg",
+            "https://www.example.com/images/great-ocean-road-3.jpg",
+            "https://www.example.com/images/great-ocean-road-4.jpg"
+        ],
+        "highlights": [
+            "Visit the Twelve Apostles",
+            "Walk through Otway Rainforest",
+            "Surfing lessons at Bells Beach",
+            "Discover wildlife at Great Otway National Park",
+            "Explore the charming town of Lorne"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Depart from Melbourne and head to Torquay, the gateway to the Great Ocean Road."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Explore the coastal town of Lorne and enjoy a scenic drive to Apollo Bay."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Visit the Twelve Apostles and explore Great Otway National Park."
+            },
+            {
+                "day": "Day 4",
+                "activities": "Continue to Warrnambool and visit the Shipwreck Coast."
+            },
+            {
+                "day": "Day 5",
+                "activities": "Return to Melbourne with stops at picturesque coastal towns."
+            }
+        ],
+        "inclusions": [
+            "4 nights’ accommodation in motels",
+            "Car rental with GPS",
+            "Daily breakfast",
+            "Guided rainforest walk"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Look for koalas in the wild along the route.",
+            "Don’t miss the sunset at the Twelve Apostles."
+        ],
+        "_id": "4b0f420b-9c5c-4045-97ec-1f155841c622"
+    },
+    "607a8735-04f5-4c00-9031-3f3f511488a1": {
+        "title": "New Zealand South Island Expedition",
+        "category": "roadTrip",
+        "description": "Discover the majestic landscapes of New Zealand’s South Island with this immersive road trip experience, featuring fjords, glaciers, and lush forests.",
+        "price": 1599,
+        "offer": "20% Off",
+        "offerExpiration": "2024-12-01",
+        "duration": "10 Days / 9 Nights",
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/3/38/Lake_Matheson_Reflection.jpg",
+            "https://www.example.com/images/nz-south-2.jpg",
+            "https://www.example.com/images/nz-south-3.jpg",
+            "https://www.example.com/images/nz-south-4.jpg"
+        ],
+        "highlights": [
+            "Cruise on Milford Sound",
+            "Visit to Franz Josef Glacier",
+            "Explore Queenstown’s adventure sports",
+            "Hike in Mount Cook National Park",
+            "Visit to Fiordland National Park"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrive in Christchurch. Explore the city’s botanical gardens."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Drive to Lake Tekapo and enjoy the stunning views."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Visit Mount Cook National Park for hiking and exploration."
+            },
+            {
+                "day": "Day 4",
+                "activities": "Head to Queenstown, the adventure capital of New Zealand."
+            },
+            {
+                "day": "Day 5",
+                "activities": "Experience adventure activities in Queenstown, such as bungee jumping."
+            },
+            {
+                "day": "Day 6",
+                "activities": "Take a scenic drive to Te Anau, the gateway to Fiordland."
+            },
+            {
+                "day": "Day 7",
+                "activities": "Cruise on Milford Sound and explore Fiordland National Park."
+            },
+            {
+                "day": "Day 8",
+                "activities": "Drive to Franz Josef Glacier and explore the glacier region."
+            },
+            {
+                "day": "Day 9",
+                "activities": "Visit the Punakaiki Pancake Rocks on the way to Greymouth."
+            },
+            {
+                "day": "Day 10",
+                "activities": "Return to Christchurch via Arthur’s Pass."
+            }
+        ],
+        "inclusions": [
+            "9 nights’ accommodation in hotels and lodges",
+            "Car rental with insurance",
+            "Daily breakfast",
+            "Milford Sound cruise ticket"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Bring layers for changing weather conditions.",
+            "Book adventure activities in Queenstown in advance."
+        ],
+        "_id": "607a8735-04f5-4c00-9031-3f3f511488a1"
+    },
+    "30f29304-4093-424c-98a8-530d85098d11": {
+        "title": "Egyptian Pyramids and Cairo Experience",
+        "category": "historical",
+        "description": "Explore the wonders of ancient Egypt, including the iconic pyramids and the vibrant city of Cairo. Discover the rich history and culture of one of the world's oldest civilizations.",
+        "price": 1199,
+        "offer": "10% Off",
+        "offerExpiration": "2024-11-15",
+        "duration": "7 Days / 6 Nights",
+        "images": [
+            "https://images.unsplash.com/photo-1543109751-1c7327a83920?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "https://images.unsplash.com/photo-1542322436-ff35f8e3624b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80",
+            "https://images.unsplash.com/photo-1563478066467-54db213007f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80",
+            "https://images.unsplash.com/photo-1576871337632-d9bb0db4b27b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
+        ],
+        "highlights": [
+            "Visit the Great Pyramids of Giza and the Sphinx",
+            "Explore the Egyptian Museum in Cairo",
+            "Tour the historic Islamic Cairo district",
+            "Cruise on the Nile River",
+            "Visit the ancient city of Memphis"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrival in Cairo and check-in at the hotel. Evening welcome dinner."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Visit the Great Pyramids of Giza and the Sphinx. Explore the Solar Boat Museum."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Tour the Egyptian Museum and enjoy a Nile River dinner cruise."
+            },
+            {
+                "day": "Day 4",
+                "activities": "Explore Islamic Cairo, including the Citadel and Khan el-Khalili bazaar."
+            },
+            {
+                "day": "Day 5",
+                "activities": "Day trip to the ancient city of Memphis and Saqqara."
+            },
+            {
+                "day": "Day 6",
+                "activities": "Free day for leisure or optional tours."
+            },
+            {
+                "day": "Day 7",
+                "activities": "Depart Cairo for your flight home."
+            }
+        ],
+        "inclusions": [
+            "6 nights’ accommodation in a 4-star hotel",
+            "Daily breakfast and select meals",
+            "Entry tickets to attractions as per itinerary",
+            "Guided tours with a professional Egyptologist"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Bring comfortable walking shoes for exploring sites.",
+            "Try local Egyptian cuisine at recommended restaurants."
+        ],
+        "_id": "30f29304-4093-424c-98a8-530d85098d11"
+    },
+    "3e219f6f-125d-4a22-9739-39105eb9cde5": {
+        "title": "Inca Trail to Machu Picchu",
+        "category": "historical",
+        "description": "Embark on a once-in-a-lifetime adventure along the Inca Trail to Machu Picchu. Experience the history and culture of the Incan Empire.",
+        "price": 1399,
+        "offer": "12% Off",
+        "offerExpiration": "2024-12-20",
+        "duration": "8 Days / 7 Nights",
+        "images": [
+            "https://images.unsplash.com/photo-1582579690029-36d0bdb088cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "https://images.unsplash.com/photo-1522957910389-42d10b0f3496?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "https://images.unsplash.com/photo-1582738412260-ffbe26c69e8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        ],
+        "highlights": [
+            "Hike the famous Inca Trail",
+            "Visit Machu Picchu at sunrise",
+            "Explore the Sacred Valley of the Incas",
+            "Tour the city of Cusco",
+            "Visit ancient Incan ruins"
+        ],
+        "itinerary": [
+            {
+                "day": "Day 1",
+                "activities": "Arrive in Cusco and acclimate to the altitude. Evening briefing."
+            },
+            {
+                "day": "Day 2",
+                "activities": "Tour the city of Cusco and nearby ruins."
+            },
+            {
+                "day": "Day 3",
+                "activities": "Explore the Sacred Valley, including Pisac and Ollantaytambo."
+            },
+            {
+                "day": "Day 4",
+                "activities": "Start the Inca Trail hike. Camp at Wayllabamba."
+            },
+            {
+                "day": "Day 5",
+                "activities": "Hike through the stunning Andean landscape to Pacaymayo."
+            },
+            {
+                "day": "Day 6",
+                "activities": "Continue the trek to Wiñay Wayna."
+            },
+            {
+                "day": "Day 7",
+                "activities": "Arrive at Machu Picchu for a guided tour. Return to Cusco."
+            },
+            {
+                "day": "Day 8",
+                "activities": "Depart Cusco for your flight home."
+            }
+        ],
+        "inclusions": [
+            "7 nights’ accommodation in hotels and camps",
+            "Daily breakfast and select meals",
+            "Inca Trail permit and entrance to Machu Picchu",
+            "Guided tours with a local guide"
+        ],
+        "exclusions": [
+            "International airfare",
+            "Travel insurance",
+            "Meals not mentioned in the itinerary"
+        ],
+        "tips": [
+            "Bring a refillable water bottle and snacks for the hike.",
+            "Consider acclimatization tours in Cusco before the trek."
+        ],
+        "_id": "3e219f6f-125d-4a22-9739-39105eb9cde5"
     }
 }

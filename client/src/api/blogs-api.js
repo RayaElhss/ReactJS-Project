@@ -4,7 +4,7 @@ const baseUrl = 'http://localhost:3030/data/blogs';
 
 export const create = (blogData) => request.post(`${baseUrl}`, blogData, true);
 
-export const deletBlogPost = async (id, accessToken) => {
+export const deleteBlogPost = async (id, accessToken) => {
     try {
         const response = await request.del(`${baseUrl}/${id}`, true);
         return response;
@@ -52,7 +52,7 @@ const blogsAPI = {
     getAllBlogs,
     getBlogById,
     updateBlogPost,
-    deletBlogPost,
+    deleteBlogPost,
 }
 
 export default blogsAPI;
