@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useLogin } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 import { useState } from "react";
+import { useValidation } from "../../hooks/useValidation";
 
 const initialValues = { email: '', password: '' };
 export default function Login() {
@@ -9,15 +10,29 @@ export default function Login() {
     const login = useLogin();
     const navigate = useNavigate();
 
+    const validationRules = {
+        email: { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/ }, // Ensure domain is at least 4 chars
+        password: { required: true }
+    };
+
+    const { fieldErrors, validateFields } = useValidation(validationRules);
+
+
     const loginHandler = async ({ email, password }) => {
+        const validationErrors = validateFields({ email, password });
+
+        if (Object.keys(validationErrors).length > 0) {
+            return;
+        }
+
         try {
-            await login(email, password)
+            await login(email, password);
             navigate('/');
         } catch (err) {
             setError(err.message);
-            console.log(err.message);
+            console.error(err.message);
         }
-    }
+    };
 
     const {
         values,
@@ -33,7 +48,6 @@ export default function Login() {
                 backgroundImage: 'url(\'https://th.bing.com/th/id/OIP.Ig-xuws5-s8__YwXXIUo5AHaEo?rs=1&pid=ImgDetMain\')'
             }}
         >
-
             <div className="mask d-flex align-items-center h-100 gradient-custom-3">
                 <div className="container h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -45,7 +59,7 @@ export default function Login() {
                                 }}
                             >
                                 <div className="card-body p-5">
-                                    <h2 className="text-uppercase text-center mb-5"> Login here</h2>
+                                    <h2 className="text-uppercase text-center mb-5">Login Here</h2>
 
                                     {error && (
                                         <div className="alert alert-danger text-center" role="alert">
@@ -73,8 +87,13 @@ export default function Login() {
                                                 onChange={changeHandler}
                                                 placeholder="raya@gmail.com"
                                             />
-
+                                            {fieldErrors.email && (
+                                                <small className="text-danger">
+                                                    {fieldErrors.email}
+                                                </small>
+                                            )}
                                         </div>
+
                                         <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example4cg"
@@ -92,9 +111,12 @@ export default function Login() {
                                                 name="password"
                                                 value={values.password}
                                                 onChange={changeHandler}
-
                                             />
-
+                                            {fieldErrors.password && (
+                                                <small className="text-danger">
+                                                    {fieldErrors.password}
+                                                </small>
+                                            )}
                                         </div>
 
                                         <div className="d-flex justify-content-center">
@@ -104,7 +126,7 @@ export default function Login() {
                                                 data-mdb-ripple-init=""
                                                 type="submit"
                                             >
-                                                login
+                                                Login
                                             </button>
                                         </div>
                                         <p className="text-center text-muted mt-5 mb-0">

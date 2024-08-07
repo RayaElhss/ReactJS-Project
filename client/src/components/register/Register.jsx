@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useRegister } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 import { useState } from "react";
+import { useValidation } from "../../hooks/useValidation";
 
 const initialValues = { name: '', email: '', password: '', rePassword: '' };
 
@@ -10,15 +11,29 @@ export default function Register() {
     const register = useRegister();
     const navigate = useNavigate();
 
+    const validationRules = {
+        name: { required: true, minLength: 3 },
+        email: { required: true, pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ },
+        password: { required: true, minLength: 6 },
+        rePassword: { required: true }
+    };
+
+    const { fieldErrors, validateFields } = useValidation(validationRules);
+
     const registerHandler = async ({ name, email, password, rePassword }) => {
+        const validationErrors = validateFields({ name, email, password, rePassword });
+
+        if (Object.keys(validationErrors).length > 0) {
+            return;
+        }
+
         if (password !== rePassword) {
-            setError('Passwords don\'t match!');
+            setError('Passwords do not match!');
             return;
         }
 
         try {
             await register(name, email, password);
-
             navigate('/');
         } catch (err) {
             setError(err.message);
@@ -39,7 +54,6 @@ export default function Register() {
                 backgroundImage: 'url(\'https://th.bing.com/th/id/OIP.Ig-xuws5-s8__YwXXIUo5AHaEo?rs=1&pid=ImgDetMain\')'
             }}
         >
-
             <div className="mask d-flex align-items-center h-100 gradient-custom-3">
                 <div className="container h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -62,7 +76,7 @@ export default function Register() {
                                     )}
 
                                     <form onSubmit={submitHandler}>
-                                        <label
+                                        <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example1cg"
                                         >
@@ -80,11 +94,15 @@ export default function Register() {
                                                 value={values.name}
                                                 onChange={changeHandler}
                                                 placeholder="Emily"
-
                                             />
-
+                                            {fieldErrors.name && (
+                                                <small className="text-danger">
+                                                    {fieldErrors.name}
+                                                </small>
+                                            )}
                                         </div>
-                                        <label
+
+                                        <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example3cg"
                                         >
@@ -103,9 +121,14 @@ export default function Register() {
                                                 onChange={changeHandler}
                                                 placeholder="emily@gmail.com"
                                             />
-
+                                            {fieldErrors.email && (
+                                                <small className="text-danger">
+                                                    {fieldErrors.email}
+                                                </small>
+                                            )}
                                         </div>
-                                        <label
+
+                                        <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example4cg"
                                         >
@@ -123,9 +146,14 @@ export default function Register() {
                                                 value={values.password}
                                                 onChange={changeHandler}
                                             />
-
+                                            {fieldErrors.password && (
+                                                <small className="text-danger">
+                                                    {fieldErrors.password}
+                                                </small>
+                                            )}
                                         </div>
-                                        <label
+
+                                        <label style={{ color: 'black' }}
                                             className="form-label"
                                             htmlFor="form3Example4cdg"
                                         >
@@ -143,11 +171,12 @@ export default function Register() {
                                                 value={values.rePassword}
                                                 onChange={changeHandler}
                                             />
-
+                                            {fieldErrors.rePassword && (
+                                                <small className="text-danger">
+                                                    {fieldErrors.rePassword}
+                                                </small>
+                                            )}
                                         </div>
-
-
-
 
                                         <div className="d-flex justify-content-center">
                                             <button

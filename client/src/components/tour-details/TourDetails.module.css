@@ -2,7 +2,7 @@
 
 .container {
     background-color: #f8f9fa;
-    padding: 20px;
+    padding: 90px;
     border-radius: 8px;
     max-width: 1000px;
     margin: 20px auto;
@@ -19,7 +19,7 @@
   
   .category {
     font-size: 1.2em;
-    color: #666;
+    color: green;
     margin-bottom: 20px;
   }
   
