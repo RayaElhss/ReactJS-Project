@@ -9,6 +9,7 @@ export default function BlogDetails() {
     const [blog, setBlog] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [likedPosts, setLikedPosts] = useState({});
 
     useEffect(() => {
         const fetchBlog = async () => {
@@ -27,9 +28,20 @@ export default function BlogDetails() {
     }, [blogId]);
 
     const handleLike = async () => {
+        if (likedPosts[blogId]) {
+            alert("You've already liked this post!");
+            return
+        };
+
+
         setBlog((prevBlog) => ({
             ...prevBlog,
             likes: (prevBlog.likes || 0) + 1,
+        }));
+
+        setLikedPosts((prevLikedPosts) => ({
+            ...prevLikedPosts,
+            [blogId]: true,
         }));
     };
 
@@ -45,9 +57,11 @@ export default function BlogDetails() {
                 <p><strong>Date:</strong> {new Date(blog._createdOn).toLocaleDateString()}</p>
                 <p><strong>Description:</strong> {blog.description}</p>
                 <div className={styles.interactions}>
-                    <button className={styles.interactionButton} onClick={handleLike}>
+
+                    <button className={styles.interactionButton} onClick={handleLike} disabled={likedPosts[blogId]}>
                         <i className="fa fa-thumbs-up" /> {blog.likes || 0} Likes
                     </button>
+
                     <button className={styles.interactionButton}>
                         <i className="fa fa-comments" /> {blog.comments?.length || 0} Comments
                     </button>
