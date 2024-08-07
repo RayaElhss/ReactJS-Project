@@ -4,6 +4,15 @@ const baseUrl = 'http://localhost:3030/data/blogs';
 
 export const create = (blogData) => request.post(`${baseUrl}`, blogData, true);
 
+export const deletBlogPost = async (id, accessToken) => {
+    try {
+        const response = await request.del(`${baseUrl}/${id}`, true);
+        return response;
+    } catch (error) {
+        console.error('Error deleting blog post:', error);
+        throw error;
+    }
+}
 
 export const getAllBlogs = async () => {
     try {
@@ -26,9 +35,9 @@ export const getBlogById = async (id) => {
     }
 };
 
-export const updateBlogPost = async (id, updatedData, token) => {
+export const updateBlogPost = async (id, updatedData) => {
     try {
-        const response = await request.put(`${baseUrl}/${id}`, updatedData, token);
+        const response = await request.put(`${baseUrl}/${id}`, updatedData, true);
         return response;
     } catch (error) {
         console.error('Error updating blog post:', error);
@@ -40,7 +49,8 @@ const blogsAPI = {
     create,
     getAllBlogs,
     getBlogById,
-    updateBlogPost
+    updateBlogPost,
+    deletBlogPost
 }
 
 export default blogsAPI;

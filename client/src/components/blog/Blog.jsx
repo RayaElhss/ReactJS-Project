@@ -2,18 +2,41 @@ import { Link } from "react-router-dom";
 import styles from "./Blog.module.css";
 import useBlogs from "../../hooks/useBlogs";
 import { useAuthContext } from "../../contexts/AuthContext";
+import { deletBlogPost } from "../../api/blogs-api";
+import { useEffect, useState } from "react";
 
 export default function OurBlog() {
     const { blogs, loading, error } = useBlogs();
     const { username } = useAuthContext();
-    const { userId } = useAuthContext();
+    const { userId, accessToken } = useAuthContext();
 
     console.log("Current User's userId:", userId);
-    
+
+    const [localBlogs, setLocalBlogs] = useState(blogs);
+
+    useEffect(() => {
+        setLocalBlogs(blogs);
+    }, [blogs])
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
 
+
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this blog post?")) {
+            try {
+                setLocalBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== id));
+                await deletBlogPost(id, accessToken);
+                alert("Blog post deleted successfully.");
+
+
+                setLocalBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== id));
+            } catch (error) {
+                console.error("Failed to delete blog post:", error);
+                alert("Failed to delete the blog post.");
+            }
+        }
+    }
 
 
     return (
@@ -36,7 +59,7 @@ export default function OurBlog() {
                     </p>
                 </div>
                 <div className="row g-4 justify-content-center">
-                    {blogs.map((blog) => (
+                    {localBlogs.map((blog) => (
                         <div className="col-lg-4 col-md-6" key={blog._id}>
                             <div className={styles["blog-item"]}>
                                 <div className={styles["blog-img"]}>
@@ -96,12 +119,20 @@ export default function OurBlog() {
                                         View post
                                     </Link>
                                     {blog._ownerId === userId && (
-                                        <Link
-                                            className="btn btn-secondary rounded-pill py-2 px-4 ms-2"
-                                            to={`/blogs/edit/${blog._id}`}
-                                        >
-                                            Edit
-                                        </Link>
+                                        <>
+                                            <Link
+                                                className="btn btn-secondary rounded-pill py-2 px-4 ms-2"
+                                                to={`/blogs/edit/${blog._id}`}
+                                            >
+                                                Edit
+                                            </Link>
+                                            <button
+                                                className="btn btn-danger rounded-pill py-2 px-4 ms-2"
+                                                onClick={() => handleDelete(blog._id)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </>
                                     )}
 
                                 </div>

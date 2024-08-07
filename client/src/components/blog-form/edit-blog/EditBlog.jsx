@@ -25,7 +25,7 @@ export default function EditBlog() {
         }, async (updatedData) => {
             try {
                 await updateBlogPost(blogId, updatedData, accessToken);
-                navigate(`/blogs/${blogId}`);
+                navigate(`/blogs`);
             } catch (error) {
                 console.log("Failed to update blog post:", error);
 
