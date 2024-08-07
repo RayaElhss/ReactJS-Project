@@ -1,0 +1,68 @@
+/* src/components/ContactUs.module.css */
+
+.contactSection {
+    padding: 300px 0;
+    background-color: rgb(85, 85, 145);
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contactItem {
+    margin-bottom: 30px;
+    flex: 1 1 200px;
+    max-width: 200px;
+    color: #444;
+}
+
+.contactItem h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contactItem p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: yellow;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.socialLinks a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.socialLinks a:hover {
+    color: #007bff;
+}
