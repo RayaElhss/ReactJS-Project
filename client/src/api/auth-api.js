@@ -6,6 +6,11 @@ export const login = (email, password) => request.post(`${baseUrl}/login`, { ema
 
 export const register = (username, email, password) => request.post(`${baseUrl}/register`, { username, email, password });
 
-
-// authenticated get request
-export const logout = async () => request.get(`${baseUrl}/logout`);
+export const logout = async () => {
+    try {
+        return await request.get(`${baseUrl}/logout`);
+    } catch (error) {
+        console.error("Logout error:", error.message || error);
+        throw error;
+    }
+}

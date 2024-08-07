@@ -6,10 +6,15 @@ import { useAuthContext } from "../../contexts/AuthContext";
 export default function OurBlog() {
     const { blogs, loading, error } = useBlogs();
     const { username } = useAuthContext();
-    console.log("Current User's Username:", username);
+    const { userId } = useAuthContext();
+
+    console.log("Current User's userId:", userId);
+    
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
+
+
 
     return (
         <div className={`container-fluid blog py-5 ${styles.blog}`}>
@@ -90,6 +95,15 @@ export default function OurBlog() {
                                     >
                                         View post
                                     </Link>
+                                    {blog._ownerId === userId && (
+                                        <Link
+                                            className="btn btn-secondary rounded-pill py-2 px-4 ms-2"
+                                            to={`/blogs/edit/${blog._id}`}
+                                        >
+                                            Edit
+                                        </Link>
+                                    )}
+
                                 </div>
                             </div>
                         </div>

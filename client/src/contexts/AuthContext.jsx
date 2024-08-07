@@ -1,4 +1,4 @@
-import { createContext, useContext} from "react";
+import { createContext, useContext } from "react";
 import usePersistedState from "../hooks/usePersistedState";
 
 export const AuthContext = createContext({
@@ -16,24 +16,24 @@ export function AuthContextProvider(props) {
     const [authState, setAuthState] = usePersistedState('auth', {});
 
     const changeAuthState = (state) => {
-        localStorage.setItem('accessToken', state.accessToken);
         setAuthState(state);
     }
 
     const logout = () => {
         localStorage.removeItem('accessToken');
-        localStorage.removeItem('auth');
+        localStorage.removeItem('auth');  // Clear persisted state
         setAuthState({
             userId: '',
             email: '',
             username: '',
             accessToken: ''
-        });
-    }
+        });  // Reset state
+    };
 
     const contextData = {
-        userId: authState._id,
+        userId: authState.userId,
         email: authState.email,
+        username: authState.username,
         accessToken: authState.accessToken,
         isAuthenticated: !!authState?.email,
         changeAuthState,
